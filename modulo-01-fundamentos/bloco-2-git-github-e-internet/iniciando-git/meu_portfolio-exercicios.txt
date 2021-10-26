@@ -1,0 +1,148 @@
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ ls -a
+.   .git                   modulo-02-des-front-end  modulo-04-computer-science  trybe-exercicios
+..  modulo-01-fundamentos  modulo-03-back-end       README.md
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	README.md
+	modulo-01-fundamentos/
+	modulo-02-des-front-end/
+	modulo-03-back-end/
+	modulo-04-computer-science/
+	trybe-exercicios/
+
+nothing added to commit but untracked files present (use "git add" to track)
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git add README.md 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	modulo-01-fundamentos/
+	modulo-02-des-front-end/
+	modulo-03-back-end/
+	modulo-04-computer-science/
+	trybe-exercicios/
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git add .
+error: 'trybe-exercicios/' does not have a commit checked out
+fatal: adding files failed
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	modulo-01-fundamentos/
+	modulo-02-des-front-end/
+	modulo-03-back-end/
+	modulo-04-computer-science/
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git add .
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/animais/animais_fofinhos.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/animais/animais_raivosos.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/diretorio_qualquer/arqivo.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/diretorio_qualquer/cores.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/diretorio_qualquer/historico.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/diretorio_qualquer/nomes.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/diretorio_qualquer/nomes_e_cores.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/terminalAulaLive1_4 - Unix & Bash - Parte 2.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/dia-03-unix-e-bash-parte-1/parte-i-criacao-de-arquivos-e-diretorios.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/dia-03-unix-e-bash-parte-1/parte-ii-manipulacao-e-busca.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/bunch_of_things.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/countries.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/empty.pdf
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/empty.tbt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/phrases.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/phrases2.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/skills2.txt
+	new file:   modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/top_skills.txt
+	new file:   modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/README.md
+	new file:   modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/criando-repo.txt
+	new file:   modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/meu_arquivo.txt
+	new file:   modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/trybe-skills.txt
+	new file:   modulo-02-des-front-end/empty.txt
+	new file:   modulo-03-back-end/empty.txt
+	new file:   modulo-04-computer-science/empty.txt
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git commit -m "Frist commit."
+[master (root-commit) 0091317] Frist commit.
+ 26 files changed, 3494 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/animais/animais_fofinhos.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/animais/animais_raivosos.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/diretorio_qualquer/arqivo.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/diretorio_qualquer/cores.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/diretorio_qualquer/historico.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/diretorio_qualquer/nomes.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/diretorio_qualquer/nomes_e_cores.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/terminalAulaLive1_4 - Unix & Bash - Parte 2.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/dia-03-unix-e-bash-parte-1/parte-i-criacao-de-arquivos-e-diretorios.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/dia-03-unix-e-bash-parte-1/parte-ii-manipulacao-e-busca.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/bunch_of_things.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/countries.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/empty.pdf
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/empty.tbt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/phrases.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/phrases2.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/skills2.txt
+ create mode 100644 modulo-01-fundamentos/bloco-01-unix-e-bash/unix_tests/top_skills.txt
+ create mode 100644 modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/README.md
+ create mode 100644 modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/criando-repo.txt
+ create mode 100644 modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/meu_arquivo.txt
+ create mode 100644 modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/trybe-skills.txt
+ create mode 100644 modulo-02-des-front-end/empty.txt
+ create mode 100644 modulo-03-back-end/empty.txt
+ create mode 100644 modulo-04-computer-science/empty.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch master
+nothing to commit, working tree clean
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git push git@github.com:brmarmello/exercicios-trybe.git
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream git@github.com:brmarmello/exercicios-trybe.git master
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ ^C
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git push --set-upstream git@github.com:brmarmello/exercicios-trybe.git master
+Enumerating objects: 33, done.
+Counting objects: 100% (33/33), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (33/33), 13.98 KiB | 753.00 KiB/s, done.
+Total 33 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+To github.com:brmarmello/exercicios-trybe.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'git@github.com:brmarmello/exercicios-trybe.git'.
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$
