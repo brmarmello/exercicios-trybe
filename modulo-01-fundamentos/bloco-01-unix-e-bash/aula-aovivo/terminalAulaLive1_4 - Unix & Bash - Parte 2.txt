@@ -1,0 +1,1269 @@
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ man curl
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ cat countries.txt
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Romania
+Russian Federation
+Rwanda
+St Kitts & Nevis
+St Lucia
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+Zimbabwedevbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ less countries.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ less countries.txt grep Zambia
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ less grep Zambia countries.txt
+grep: No such file or directory
+Zambia: No such file or directory
+countries.txt  (press RETURN)devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ grep Brazil countries.txt
+Brazil
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ grep u Brazil countries.txt
+grep: Brazil: No such file or directory
+countries.txt:Antigua & Deps
+countries.txt:Australia
+countries.txt:Austria
+countries.txt:Belarus
+countries.txt:Belgium
+countries.txt:Bhutan
+countries.txt:Brunei
+countries.txt:Bulgaria
+countries.txt:Burkina
+countries.txt:Burundi
+countries.txt:Cuba
+countries.txt:Cyprus
+countries.txt:Czech Republic
+countries.txt:Djibouti
+countries.txt:Dominican Republic
+countries.txt:Ecuador
+countries.txt:Equatorial Guinea
+countries.txt:Guatemala
+countries.txt:Guinea
+countries.txt:Guinea-Bissau
+countries.txt:Guyana
+countries.txt:Honduras
+countries.txt:Hungary
+countries.txt:Ireland {Republic}
+countries.txt:Korea South
+countries.txt:Kuwait
+countries.txt:Lithuania
+countries.txt:Luxembourg
+countries.txt:Mauritania
+countries.txt:Mauritius
+countries.txt:Mozambique
+countries.txt:Myanmar, {Burma}
+countries.txt:Nauru
+countries.txt:Nicaragua
+countries.txt:Palau
+countries.txt:Papua New Guinea
+countries.txt:Paraguay
+countries.txt:Peru
+countries.txt:Portugal
+countries.txt:Russian Federation
+countries.txt:St Lucia
+countries.txt:Saudi Arabia
+countries.txt:South Africa
+countries.txt:South Sudan
+countries.txt:Sudan
+countries.txt:Suriname
+countries.txt:Tunisia
+countries.txt:Turkey
+countries.txt:Turkmenistan
+countries.txt:Tuvalu
+countries.txt:Uruguay
+countries.txt:Vanuatu
+countries.txt:Venezuela
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ grep Brazil u countries.txt
+grep: u: No such file or directory
+countries.txt:Brazil
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ touch phrases.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ mkdir animais
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ cd animais
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ echo 'Oi, mãe! Tô na Trybe!
+> ^C
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ echo 'Oi, mãe! Tô na Trybe!'
+Oi, mãe! Tô na Trybe!
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ ls
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ echo 'cachorro' > animais_fofinhos.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ ls
+animais_fofinhos.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ cat animais_fofinhos.txt 
+cachorro
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ echo 'gato' > animais_fofinhos.txt 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ cat animais_fofinhos.txt 
+gato
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ echo 'cachorro' >> animais_fofinhos.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ cat animais_fofinhos.txt 
+gato
+cachorro
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ cat >> animais_raivosos.txt
+pincher
+urso
+cobra
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ ls
+animais_fofinhos.txt  animais_raivosos.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ cat animais_raivosos.txt
+pincher
+urso
+cobra
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ cat animais_raivosos.txt >> animais_fofinhos.txt 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ cat animais_raivosos.txt
+pincher
+urso
+cobra
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ cat animais_fofinhos.txt 
+gato
+cachorro
+pincher
+urso
+cobra
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ cd ..
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ mkdir diretorio_qualquer
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ cd diretorio_qualquer/
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ history
+    1  sudo add-apt-repository ppa:nilarimogard/webupd8
+    2  sudo apt-get update
+    3  sudo apt-get install youtube-dl youtube-dlg
+    4  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+    5  [sudo] password for devbm: 
+    6  Command 'curl' not found, but can be installed with:
+    7  sudo snap install curl  # version 7.78.0, or
+    8  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+    9  curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+   10  sudo apt install curl
+   11  clear
+   12  curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+   13  clear
+   14  sudo apt-get install -y nodejs
+   15  clear
+   16  node --version
+   17  npm --version
+   18  clear
+   19  git
+   20  sudo apt install git
+   21  clear
+   22  git
+   23  clear
+   24  npm init -y
+   25  clear
+   26  yarn add express
+   27  sudo apt install cmdtest
+   28  yarn add express
+   29  clear
+   30  ls
+   31  Desktop
+   32  cd /home/Desktop/projeto
+   33  cd: /home/Desktop/projeto: No such file or directory
+   34  cd:/home/Desktop/projeto
+   35  cd ~/
+   36  pwd
+   37  cd /home/devbm/Desktop/projeto
+   38  cde
+   39  cd
+   40  cd /home/documents/projetosnode
+   41  cd: /home/Documents/projetosnode
+   42  cd /home/devbm/documents/projetosnode
+   43  /home/devbm/Documents/projetosnode
+   44  cd /projetosnode
+   45  clear
+   46  cd /home/devbm/Documents/projetosnode
+   47  npm install -g express-generator
+   48  express -e --git fcamarat1
+   49  sudo apt install node-express-generator
+   50  express -e --git fcamarat1
+   51  clear
+   52  node
+   53  mongo
+   54  node -v
+   55  node index.js
+   56  cd /home/devbm/Desktop/node-express
+   57  node index.js
+   58  cd /home/devbm/Desktop/node-express
+   59  index.js
+   60  node inde.js
+   61  clear
+   62  node index.js
+   63  cleasr
+   64  clear
+   65  npm install express --save
+   66  ls
+   67  clear
+   68  nmp init
+   69  clear
+   70  npm init
+   71  clear
+   72  npm install express --save
+   73  node index.js
+   74  clear
+   75  cd /home/devbm/Desktop/node-express
+   76  node index.js
+   77  cd /home/devbm/Downloads/Postman-linux-x86_64-8.11.1
+   78  tar zxvf Postman-linux-x64-*.tar.gz
+   79  clear
+   80  cd
+   81  clear
+   82  cd /home/devbm/Desktop/node-express
+   83  node index.js
+   84  cd /home/devbm/Desktop/node-express
+   85  node index.js
+   86  cd /home/devbm/Desktop/node-express
+   87  node index.js
+   88  cd /home/devbm/Desktop/node-express
+   89  node index.js
+   90  cd /home/devbm/Desktop/node-express
+   91  node index.js
+   92  clear
+   93  node index.js
+   94  cd /home/devbm/Desktop/node-express
+   95  node index.js
+   96  cd /home/devbm/Desktop/node-express
+   97  node index.js
+   98  clear
+   99  node index.js
+  100  cd /home/devbm/Desktop/proj_node-express/node-express
+  101  node index.js
+  102  cd /home/devbm/Documents/FCamara/back-end/schedule-project-back-end-main
+  103  clear
+  104  node index.js
+  105  cd /home/devbm/Documents/FCamara/back-end/schedule-project-back-end-main
+  106  node index.js
+  107  clear
+  108  node index.js
+  109  cd /serie-node
+  110  clear
+  111  cd /home/devbm/Desktop/serie-node
+  112  clear
+  113  npm init -y
+  114  yarn add express
+  115  npm install express
+  116  clear
+  117  npm install body-parser
+  118  clear
+  119  exit
+  120  cd /home/devbm/Desktop/serie-node
+  121  node src/index.js
+  122  clear
+  123  node src/index.js
+  124  cd
+  125  clear
+  126  mongo
+  127  clear
+  128  sudo systemctl start mongod
+  129  clear
+  130  wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+  131  lbs_release -dc
+  132  lsb-release dc
+  133  lsb-release -dc
+  134  clear
+  135  wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+  136  lsb_release -dc
+  137  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+  138  sudo apt-get update
+  139  clear
+  140  sudo apt-get install -y mongodb-org
+  141  clear
+  142  sudo systemctl start mongod
+  143  clear
+  144  mongo
+  145  clear
+  146  npm install mongoose
+  147  clear
+  148  cd /home/devbm/Desktop/serie-node
+  149  clear
+  150  node src/index.js
+  151  clear
+  152  sudo systemctl start mongod
+  153  mongo
+  154  node src/index.js
+  155  clear
+  156  node src/index.js
+  157  clear
+  158  node src/index.js
+  159  clear
+  160  node src/index.js
+  161  clear
+  162  node src/index.js
+  163  clear
+  164  node src/index.js
+  165  clear
+  166  node src/index.js
+  167  clear
+  168  node src/index.js
+  169  clear
+  170  node src/index.js
+  171  clear
+  172  node
+  173  clear
+  174  node src/index.js
+  175  node
+  176  clear
+  177  node src/index.js
+  178  clear
+  179  node src/index.js
+  180  cd /home/devbm/Desktop/serie-node/src
+  181  clear
+  182  node index.js
+  183  cd
+  184  clear
+  185  sudo systemctl start mongod
+  186  mongo
+  187  clear
+  188  sudo systemctl start mongod
+  189  cd /home/devbm/Desktop/serie-node
+  190  node src/index.js
+  191  clear
+  192  cd
+  193  npm -v
+  194  npm outdated
+  195  clear
+  196  cd /home/devbm/Desktop/serie-node
+  197  cd
+  198  npm -v
+  199  ls
+  200  clear
+  201  exit
+  202  cd /home/devbm/Desktop/serie-node
+  203  clear
+  204  sudo systemctl start mongod
+  205  node src/index.js
+  206  clear
+  207  node index.js
+  208  clear
+  209  npm instsll
+  210  npm install express
+  211  clear
+  212  npm init -y
+  213  cd
+  214  clear
+  215  node index.js
+  216  clear
+  217  node index.js
+  218  clear
+  219  cd /home/devbm/Desktop
+  220  cd
+  221  clear
+  222  cd /home/devbm/Desktop/serie-node/src
+  223  node index.js
+  224  clear
+  225  sudo systemctl start mongod
+  226  node index.js
+  227  clear
+  228  node index.js
+  229  clear
+  230  sudo systemctl start mongod
+  231  node index.js
+  232  cd /home/devbm/Desktop/serie-node
+  233  cd
+  234  sudo systemctl start mongod
+  235  cd /home/devbm/Desktop/serie-node
+  236  node /src/index.js
+  237  node ./src/index.js
+  238  node ../src/index.js
+  239  clear
+  240  cd
+  241  git --version
+  242  git config --list
+  243  clear
+  244  cd /home/devbm/Desktop/serie-node
+  245  clear
+  246  node src/index.js
+  247  cd
+  248  cd /home/devbm/Desktop/serie-node/src
+  249  clear
+  250  node index.js
+  251  cd
+  252  clear
+  253  cd /home/devbm/Desktop/SQUAD-10/KM/schedule-project-back-end-develop
+  254  clear
+  255  cd
+  256  cd /home/devbm/Desktop/SQUAD-10/KM/schedule-project-back-end-develop/src
+  257  clear
+  258  node index.js
+  259  cd
+  260  clear
+  261  npm install mongoose
+  262  cleare
+  263  clear
+  264  npm install express
+  265  clear
+  266  cd /home/devbm/Desktop/serie-node
+  267  npm install express
+  268  npm install body-parser
+  269  clear
+  270  node
+  271  sudo systemctl start mongod
+  272  node index.js
+  273  clear
+  274  node index.js
+  275  cd /home/devbm/Desktop/serie-node/src
+  276  node index.js
+  277  cd project
+  278  clear
+  279  cd /home/devbm/Desktop/crud-project
+  280  clear
+  281  touch admin.js
+  282  npm i admin-bro @admin-bro/express express express-formidable
+  283  clear
+  284  node admin.js
+  285  cd
+  286  cd /home/devbm/Desktop/crud-project
+  287  clear
+  288  cd
+  289  clear
+  290  rm -rf /usr/local/lib/node_modules/npm 
+  291  rm -rf /usr/local/lib/node_modules/npm
+  292  sudo apt update
+  293  sudo apt install nodejs
+  294  clear
+  295  nodejs -v
+  296  sudo apt install nodejs
+  297  nodejs -v
+  298  node admin.js
+  299  clear
+  300  exit
+  301  sudo apt remove nodejs npm
+  302  sudo apt purge nodejs
+  303  sudo apt autoremove
+  304  clear
+  305  nvm current
+  306  nvm --version
+  307  which node
+  308  which nodejs
+  309  which npm
+  310  node
+  311  clear
+  312  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+  313  sudo apt install nodejs
+  314  node --version
+  315  npm --version
+  316  mongo --version
+  317  express --version
+  318  clear
+  319  cd /home/devbm/Desktop/crud-project
+  320  clear
+  321  npm i admin-bro @admin-bro/express express express-formidable
+  322  node admin.js
+  323  clear
+  324  npm install config
+  325  clear
+  326  node admin.js
+  327  cd
+  328  npm install config
+  329  clear
+  330  cd /home/devbm/Desktop/crud-project
+  331  node admin.js
+  332  cd
+  333  exit
+  334  cd /home/devbm/Desktop/crud-project
+  335  node admin.js
+  336  cd
+  337  node
+  338  clear
+  339  node local
+  340  clear
+  341  npm install -d
+  342  cd /home
+  343  npm install -d
+  344  cd /home/devbm/Desktop/crud-project
+  345  node admin.js
+  346  npm install -d
+  347  npm init -y
+  348  npm i admin-bro @admin-bro/express express express-formidable
+  349  node admin.js
+  350  cd /home/devbm/Desktop/crud-project
+  351  node admin.js
+  352  npm install tslib
+  353  node admin.js
+  354  cd ..
+  355  cd crud-project/
+  356  npm i express-session
+  357  node admin.js
+  358  npm remove  express-session
+  359  npm i express-formidable
+  360  node admin.js
+  361  npm remove  express-session
+  362  npm i express-session
+  363  node admin.js
+  364  clear
+  365  cd
+  366  exit
+  367  node admin.js
+  368  clear
+  369  npm i @admin-bro/mongoose mongoose
+  370  clear
+  371  node admin.js
+  372  mongo --version
+  373  sudo systemctl restart mongod
+  374  node admin.js
+  375  clear
+  376  node admin.js
+  377  CLEAR
+  378  clear
+  379  exit
+  380  node admin.js
+  381  clear
+  382  node admin.js
+  383  mongo -v
+  384  mongo --version
+  385  clear
+  386  mongod
+  387  clear
+  388  node admin.js
+  389  clear
+  390  cd /home/devbm/Desktop/crud-project
+  391  node admin.js
+  392  systemctl enable mongodb.service
+  393  mongodb
+  394  sudo systemctl status mongod
+  395  node admin.js
+  396  sudo systemctl status mongod
+  397  mongodb
+  398  mongod --dbpath=/data
+  399  node admin.js
+  400  npm init
+  401  sudo systemctl restart mongod
+  402  sudo systemctl status mongod
+  403  chown -R mongod:mongod /var/lib/mongo/
+  404  chown mongod:mongod /tmp/mongodb-27017.sock
+  405  chown -R mongod:mongod /var/lib/mongo/
+  406  chown -R mongod:mongod /var/lib/mongo/chown mongod:mongod /tmp/mongodb-27017.sock
+  407  chown -R mongodb:mongodb /var/lib/mongodb/
+  408  systemctl restart mongod
+  409  node admin.js
+  410  clear
+  411  exit
+  412  node admin.js
+  413  sudo systemctl restart mongod
+  414  node admin.js
+  415  clear
+  416  cd /home/devbm/Document
+  417  /home/devbm/Documentclear
+  418  cd /home/devbm/Documents
+  419  cd FCamara
+  420  git clone https://github.com/SQUAD-10/schedule-project-back-end.git
+  421  git branch --show current
+  422  git branch --show-current
+  423  git checkout develop
+  424  yarn dev
+  425  npm dev
+  426  npm init
+  427  yarn init
+  428  clesr
+  429  clear
+  430  npm install
+  431  clear
+  432  yarn dev
+  433  npm dev
+  434  clear
+  435  rmdir -rf node_modules
+  436  rmdir -f node_modules
+  437  rm -d node_modules
+  438  rm -drf node_modules
+  439  clear
+  440  yarn init
+  441  yarn install
+  442  yarn add
+  443  yarn install
+  444  cleasr
+  445  clear
+  446  sudo apt remove cmdtest
+  447  sudo apt remove yarn
+  448  clear
+  449  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  450  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  451  sudo apt-get update
+  452  sudo apt-get install yarn -y
+  453  yarn install
+  454  yarn dev
+  455  git checkout -b devbm
+  456  gir branch --show -current
+  457  gir branch --show-current
+  458  git branch --show-current
+  459  mongodb+srv://devbm:<password>@cluster0.ldynr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+  460  mongodb+srv://devbm:<dev986263>@cluster0.ldynr.mongodb.net/schedule-project-back-end?retryWrites=true&w=majority
+  461  mongodb+srv://devbm:<dt986263>@cluster0.ldynr.mongodb.net/schedule-project-back-end?retryWrites=true&w=majority
+  462  mongodb+srv://devbm:<dev986263>@cluster0.ldynr.mongodb.net/devbm?retryWrites=true&w=majority
+  463  mongodb+srv://devbm:<dev986263>@cluster0.ldynr.mongodb.net/Cluster0?retryWrites=true&w=majority
+  464  clear
+  465  git clone https://github.com/SQUAD-10/schedule-project-front-end.git
+  466  clear
+  467  exit[
+  468  exit
+  469  cd /home/devbm/Documents/FCamara
+  470  git clone https://github.com/SQUAD-10/schedule-project-front-end.git
+  471  clear
+  472  exit
+  473  git checkout develop
+  474  git status
+  475  clear
+  476  exit
+  477  git status
+  478  git checkout develop
+  479  exit
+  480  git checkout develop
+  481  git status
+  482  exit
+  483  git checkout -b
+  484  git checkout
+  485  exit
+  486  git checkout devbm
+  487  git checkout devbm
+  488  exiot
+  489  clear
+  490  cd /home/devbm/Documents/FCamara
+  491  clear
+  492  git clone https://github.com/SQUAD-10/schedule-project-front-end.git
+  493  clear
+  494  cd
+  495  exit
+  496  cd /home/devbm/Documents/FCamara
+  497  git clone https://github.com/SQUAD-10/schedule-project-front-end.git
+  498  git checkout
+  499  git checkout develop
+  500  clear
+  501  git clone https://github.com/SQUAD-10/schedule-project-front-end.git
+  502  git init
+  503  clear
+  504  cd schedule-project-front-end
+  505  clear
+  506  git pull origin develop
+  507  git status
+  508  git branch
+  509  git checkout develop
+  510  git status
+  511  git branch
+  512  clear
+  513  cd
+  514  exit
+  515  git status
+  516  git branch
+  517  cd /home/devbm/Document
+  518  cd /home/devbm/Documents/TIdevBM/DIO - Digital Inovation Online/BootcampS/Int -  MRV Front End SPA Developer/13. Criando um site para encontrar restaurantes usando Google Maps que consulta API
+  519  clear
+  520  cd /home/devbm/Documents/TIdevBM/DIO - Digital Inovation Online/BootcampS/Int -  MRV Front End SPA Developer
+  521  cd /home/devbm/Documents/TIdevBM/DIO - Digital Inovation Online/BootcampS/Int - MRV Front End SPA Developer
+  522  cd /home/devbm/Documents/TIdevBM/
+  523  cd /DIO - Digital Inovation Online/BootcampS
+  524  cd /DIO-DigitalInovationOnline/BootcampS
+  525  cd /DIO - Digital Inovation Online
+  526  ls
+  527  cd DIO - Digital Inovation Online
+  528  clear
+  529  cd /DIO-Digital_Inovation_Online
+  530  cd /home/devbm/Documents/TIdevBM/DIO-Digital_Inovation_Online/BootcampS/Int- MRV_Front_End_SPA_Developer
+  531  cd /home/devbm/Documents/TIdevBM/DIO-Digital_Inovation_Online/BootcampS/Int-MRV_Front_End_SPA_Developer
+  532  cd /13.Criando_um_site_para_encontrar_restaurantes_usando_Google_Maps_que_consulta_API
+  533  cd
+  534  cd /home/devbm/Documents/TIdevBM/DIO-Digital_Inovation_Online/BootcampS/Int-MRV_Front_End_SPA_Developer/13-Criando_um_site_para_encontrar_restaurantes_usando_Google_Maps_que_consulta_API
+  535  git clone https://github.com/patrick-narciso/restaurants-search.git
+  536  clear
+  537  yarn add styled-components
+  538  cleart
+  539  clear
+  540  yarn add styled-reset
+  541  clear
+  542  git branches
+  543  git branche
+  544  clear
+  545  git branch
+  546  exit
+  547  git branch
+  548  git init
+  549  clear
+  550  git remote add origin https://github.com/brmarmello/restaurants-search.git
+  551  git remote
+  552  git push -u origin master
+  553  git push -u origin main
+  554  exit
+  555  /home/devbm/Documents/TIdevBM/DIO-Digital_Inovation_Online/BootcampS/Int-MRV_Front_End_SPA_Developer/13-Criando_um_site_para_encontrar_restaurantes_usando_Google_Maps_que_consulta_API/restaurants-search
+  556  clear
+  557  cd /home/devbm/Documents/TIdevBM/DIO-Digital_Inovation_Online/BootcampS/Int-MRV_Front_End_SPA_Developer/13-Criando_um_site_para_encontrar_restaurantes_usando_Google_Maps_que_consulta_API/restaurants-search
+  558  git init
+  559  clear
+  560  git remote add origin https://github.com/brmarmello/restaurants-search.git
+  561  git push -u origin master
+  562  clear
+  563  exit
+  564  yarn start
+  565  cd /home/devbm/Documents/TIdevBM/DIO-Digital_Inovation_Online/BootcampS/Int-MRV_Front_End_SPA_Developer/13-Criando_um_site_para_encontrar_restaurantes_usando_Google_Maps_que_consulta_API/restaurants-search-master
+  566  git init
+  567  git remote add origin https://github.com/brmarmello/restaurants-search.git
+  568  git add *
+  569  git commit -m "primeiro commit"
+  570  git push origin master
+  571  cd
+  572  clear
+  573  cd /home/devbm/Documents/TIdevBM/DIO-Digital_Inovation_Online/BootcampS/Int-MRV_Front_End_SPA_Developer/19. Criando um front-end totalmente componentizado na prática com ReactJS
+  574  clear
+  575  cd /home/devbm/Documents/TIdevBM/DIO-Digital_Inovation_Online/BootcampS/Int-MRV_Front_End_SPA_Developer/19-Criando_um_front-end_totalmente_componentizado_na_pratica_com_ReactJS
+  576  clear
+  577  npx create-react-app my-app
+  578  cd my-app
+  579  code .
+  580  cd
+  581  exit
+  582  yarn star
+  583  clear
+  584  yarn star
+  585  clear
+  586  yarn start
+  587  clear
+  588  yarn start
+  589  clear
+  590  npm i axios
+  591  clear
+  592  npm install --save styled-components
+  593  clear
+  594  yarn start
+  595  clear
+  596  yarn start
+  597  exit
+  598  sudo apt install ffmpeg
+  599  sudo add-apt-repository ppa:obsproject/obs-studio
+  600  sudo apt install obs-studio
+  601  clear
+  602  exit
+  603  yarn start
+  604  clear
+  605  yarn start
+  606  node -v
+  607  nvm
+  608  exit
+  609  sudo apt install gcc make adb usbmuxd linux-headers-`uname -r`
+  610  cd /tmp/
+  611  wget https://files.dev47apps.net/linux/droidcam_latest.zip
+  612  unzip droidcam_latest.zip -d droidcam && cd droidcam
+  613  sudo ./install-client
+  614  sudo ./install-video
+  615  sudo ./install-sound
+  616  clear
+  617  exit
+  618  sudo apt install menulibre
+  619  node -v
+  620  nvm -v
+  621  ls
+  622  LS -A
+  623  ls -a
+  624  cd Documents
+  625  cd 
+  626  clear
+  627  cd .
+  628  cd ..
+  629  pwd
+  630  ~
+  631  cd..
+  632  clear
+  633  cd ..
+  634  cd
+  635  cd documents
+  636  cd Documents
+  637  cd Trybe
+  638  cd /home/devbm/Documents/TIdevBM/Trybe
+  639  pwd
+  640  mkdir exercicios
+  641  cd exercicios
+  642  clear
+  643  mkdir unix_tests
+  644  cd  unix_tests
+  645  touch trybe.txt
+  646  ls
+  647  cp trybe.txt trybe_backup.txt
+  648  ls
+  649  mv trybe.txt triboA.txt
+  650  ls
+  651  mkdir backup
+  652  ls
+  653  mv trybe_backup.txt /backup
+  654  ls
+  655  mv trybe_backup.txt /home/devbm/Documents/TIdevBM/Trybe/exercicios/unix_tests/backup
+  656  ls
+  657  cd backup
+  658  ls
+  659  cd /unix_tests
+  660  cd .
+  661  cd ~
+  662  /home/devbm/Documents/TIdevBM/Trybe/exercicios/unix_tests
+  663  cd /home/devbm/Documents/TIdevBM/Trybe/exercicios/unix_tests
+  664  mkdir backup2
+  665  ls
+  666  mv backup/trybe_backup.txt backup2
+  667  ls
+  668  rmdir backup
+  669  ls
+  670  mv backup2 backup
+  671  ls
+  672  pwd
+  673  rm -rf backup
+  674  ls
+  675  clear
+  676  toutch skills.txt
+  677  touch skills.txt
+  678  ls
+  679  code skills.txt
+  680  head -5 skills.txt
+  681  tail -4 skills.txt
+  682  touch xablau.pdf
+  683  ls
+  684  rm -rf *.txt
+  685  ls
+  686  rm -rf *.txt
+  687  cd ..
+  688  cd .
+  689  cd ~
+  690  ls /
+  691  clear
+  692  map curl
+  693  curl map
+  694  clear
+  695  man curl
+  696  cat countries.txt
+  697  less countries.txt
+  698  less countries.txt grep Zambia
+  699  less grep Zambia countries.txt
+  700  grep Brazil countries.txt
+  701  grep u Brazil countries.txt
+  702  grep Brazil u countries.txt
+  703  touch phrases.txt
+  704  mkdir animais
+  705  cd animais
+  706  echo 'Oi, mãe! Tô na Trybe!
+  707  echo 'Oi, mãe! Tô na Trybe!'
+  708  ls
+  709  echo 'cachorro' > animais_fofinhos.txt
+  710  ls
+  711  cat animais_fofinhos.txt 
+  712  echo 'gato' > animais_fofinhos.txt 
+  713  cat animais_fofinhos.txt 
+  714  echo 'cachorro' >> animais_fofinhos.txt
+  715  cat animais_fofinhos.txt 
+  716  cat >> animais_raivosos.txt
+  717  ls
+  718  cat animais_raivosos.txt
+  719  cat animais_raivosos.txt >> animais_fofinhos.txt 
+  720  cat animais_raivosos.txt
+  721  cat animais_fofinhos.txt 
+  722  cd ..
+  723  mkdir diretorio_qualquer
+  724  cd diretorio_qualquer/
+  725  history
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ history tail -3
+bash: history: tail: numeric argument required
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ history | tail -3
+  725  history
+  726  history tail -3
+  727  history | tail -3
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ tail ../animais/animais_fofinhos.txt 
+gato
+cachorro
+pincher
+urso
+cobra
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ tail -2 ../animais/animais_fofinhos.txt 
+urso
+cobra
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ history | tail -3
+  728  tail ../animais/animais_fofinhos.txt 
+  729  tail -2 ../animais/animais_fofinhos.txt 
+  730  history | tail -3
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ history | tail -3 > historico.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls
+historico.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cat historico.txt 
+  729  tail -2 ../animais/animais_fofinhos.txt 
+  730  history | tail -3
+  731  history | tail -3 > historico.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cd ..
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ cd animais
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ sort animais_fofinhos.txt 
+cachorro
+cobra
+gato
+pincher
+urso
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ cat animais_fofinhos.txt 
+gato
+cachorro
+pincher
+urso
+cobra
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ sort -r animais_fofinhos.txt 
+urso
+pincher
+gato
+cobra
+cachorro
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/animais$ cd ..
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ cd diretorio_qualquer/
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cat > nomes.txt
+yasmin
+mariana
+caio
+jeovane
+^C
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cat nomes.txt 
+yasmin
+mariana
+caio
+jeovane
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cat > cores.txt
+roxo
+branco
+azul
+preto
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls
+cores.txt  historico.txt  nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 12
+-rw-rw-r-- 1 devbm devbm  23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cat nomes.txt cores.txt 
+yasmin
+mariana
+caio
+jeovane
+roxo
+branco
+azul
+preto
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cat nomes.txt cores.txt | sort
+azul
+branco
+caio
+jeovane
+mariana
+preto
+roxo
+yasmin
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cat nomes.txt cores.txt | sort > nomes_e_cores.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls
+cores.txt  historico.txt  nomes_e_cores.txt  nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cat nomes_e_cores.txt 
+azul
+branco
+caio
+jeovane
+mariana
+preto
+roxo
+yasmin
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-rw-rw-r-- 1 devbm devbm  23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -la
+total 24
+drwxrwxr-x 2 devbm devbm 4096 out 21 17:14 .
+drwxrwxr-x 4 devbm devbm 4096 out 21 16:53 ..
+-rw-rw-r-- 1 devbm devbm   23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm  114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm   51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm   28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ find . -type
+find: missing argument to `-type'
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ find . -type f
+./nomes.txt
+./cores.txt
+./historico.txt
+./nomes_e_cores.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ find . -type d
+.
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cd ..
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ find . -type d
+.
+./diretorio_qualquer
+./animais
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ find diretorio_qualquer -name '*nome*'
+diretorio_qualquer/nomes.txt
+diretorio_qualquer/nomes_e_cores.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ cd diretorio_qualquer/
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -la
+total 24
+drwxrwxr-x 2 devbm devbm 4096 out 21 17:14 .
+drwxrwxr-x 4 devbm devbm 4096 out 21 16:53 ..
+-rw-rw-r-- 1 devbm devbm   23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm  114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm   51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm   28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-rw-rw-r-- 1 devbm devbm  23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ chmod a+w cores.txt 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-rw-rw-rw- 1 devbm devbm  23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ chmod a+x cores.txt 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-rwxrwxrwx 1 devbm devbm  23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ./cores.txt 
+./cores.txt: line 1: roxo: command not found
+./cores.txt: line 2: branco: command not found
+./cores.txt: line 3: azul: command not found
+./cores.txt: line 4: preto: command not found
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ chmod a-x cores.txt 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-rw-rw-rw- 1 devbm devbm  23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ chmod g-w cores.txt 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-rw-r--rw- 1 devbm devbm  23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ chmod o-w cores.txt 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-rw-r--r-- 1 devbm devbm  23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ chmod u-w cores.txt 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-r--r--r-- 1 devbm devbm  23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cat >> arqivo.txt
+^[[A^C
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ chmod u+w cores.txt 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cat >> arqivo.txt
+^C
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-rw-rw-r-- 1 devbm devbm   0 out 21 17:57 arqivo.txt
+-rw-r--r-- 1 devbm devbm  23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ chmod u+w * 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-rw-rw-r-- 1 devbm devbm   0 out 21 17:57 arqivo.txt
+-rw-r--r-- 1 devbm devbm  23 out 21 17:10 cores.txt
+-rw-rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-rw-rw-r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-rw-rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ chmod u-w * 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-r--rw-r-- 1 devbm devbm   0 out 21 17:57 arqivo.txt
+-r--r--r-- 1 devbm devbm  23 out 21 17:10 cores.txt
+-r--rw-r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-r--rw-r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-r--rw-r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ chmod o-w * 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ chmod g-w * 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ ls -l
+total 16
+-r--r--r-- 1 devbm devbm   0 out 21 17:57 arqivo.txt
+-r--r--r-- 1 devbm devbm  23 out 21 17:10 cores.txt
+-r--r--r-- 1 devbm devbm 114 out 21 17:01 historico.txt
+-r--r--r-- 1 devbm devbm  51 out 21 17:14 nomes_e_cores.txt
+-r--r--r-- 1 devbm devbm  28 out 21 17:09 nomes.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/diretorio_qualquer$ cd ..
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ mkdir ubuntu
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests$ cd ubuntu/
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/ubuntu$ man wget
+devbm@dtbm:~/Documents/TIdevBM/Trybe/exercicios/unix_tests/ubuntu$ wget 
+

@@ -1,0 +1,744 @@
+Parte I - Criação de arquivos e diretórios
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos$ cd bloco-01-unix-e-bash/
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash$ cd aula-aovivo/
+
+1- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo$ mkdir unix_tests
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo$ ls
+'terminalAulaLive1_4 - Unix & Bash - Parte 2.txt'   unix_test   unix_tests
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo$ cd unix_tests
+
+2- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ touch trybe.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+trybe.txt
+
+3- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cp trybe.txt trybe_backup.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+trybe_backup.txt  trybe.txt
+
+4- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ mv trybe.txt tribo.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+tribo.txt  trybe_backup.txt
+
+5- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ mkdir backup
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+backup  tribo.txt  trybe_backup.txt
+
+6- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ mv trybe_backup.txt backup/
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+backup  tribo.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cd backup/
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests/backup$ ls
+trybe_backup.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests/backup$ cd ..
+
+7- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ mkdir backup2
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+backup  backup2  tribo.txt
+
+8- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ mv backup/trybe_backup.txt backup2
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+backup  backup2  tribo.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cd backup2
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests/backup2$ ls
+trybe_backup.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests/backup2$ cd ..
+
+9- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ rmdir backup
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+backup2  tribo.txt
+
+10- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ mv backup2 backup
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+backup  tribo.txt
+
+11- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ pwd
+/home/devbm/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests
+
+12- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ rmdir backup
+rmdir: failed to remove 'backup': Directory not empty
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+backup  tribo.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ rm -rf backup
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+tribo.txt
+
+13-devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ clear
+
+devbm@dtbm:~$ cd /home/devbm/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests
+
+14- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ head -5 skills.txt
+Internet
+Unix
+Bash
+HTML
+CSS
+
+15- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ tail -5 skills.txt
+HTML
+CSS
+JavaScript
+React
+SQL
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+skills.txt  tribo.txt
+
+16- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ rm *.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ 
+
+---------- x ----------   ---------- x ----------   ---------- x ----------   ---------- x ----------   ---------- x ----------   ------- x -------
+
+Parte II - Manipulação & Busca
+
+1- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1842  100  1842    0     0   4912      0 --:--:-- --:--:-- --:--:--  4912
+
+2- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat countries.txt
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Romania
+Russian Federation
+Rwanda
+St Kitts & Nevis
+St Lucia
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+Zimbabwe
+
+3- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ less countries.txt
+Exibe... Navega-se entre as páginas usando barra de espaço... Para sair da exibição, clicar em 'q' de quit.
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$
+
+4- [ERRO]devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ less countries.txt grap Zambia
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ less countries.txt
+Entrar no arquivo... dentro do arquivo, digitar /Zambia + Enter... Para sair, digitar 'q'.
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ 
+
+5- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ grep Brazil countries.txt 
+Brazil
+
+6- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ grep -i brazil countries.txt 
+Brazil
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ touch phrases.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+countries.txt  phrases.txt
+
+7- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ grep -iv fox countries.txt 
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Romania
+Russian Federation
+Rwanda
+St Kitts & Nevis
+St Lucia
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+Zimbabwe
+
+>>>>> OU <<<<< devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ grep -v fox countries.txt 
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Romania
+Russian Federation
+Rwanda
+St Kitts & Nevis
+St Lucia
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+Zimbabwe
+
+8- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ wc -w phrases.txt 
+93 phrases.txt
+
+9- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ wc -l phrases.txt 
+9 phrases.txt
+
+10- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ touch empty.tbt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+countries.txt  empty.tbt  phrases.txt
+
+10.1- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ touch empty.pdf
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+countries.txt  empty.pdf  empty.tbt  phrases.txt
+
+11- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls *
+countries.txt  empty.pdf  empty.tbt  phrases.txt
+
+12- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls *.txt
+countries.txt  phrases.txt
+
+13- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls -l *t?t
+-rw-rw-r-- 1 devbm devbm 1842 out 23 20:34 countries.txt
+-rw-rw-r-- 1 devbm devbm    0 out 23 21:06 empty.tbt
+-rw-rw-r-- 1 devbm devbm  539 out 21 16:14 phrases.txt
+
+14- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ man ls
+Quando quiser sair, digitar 'q'.
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$
+
+

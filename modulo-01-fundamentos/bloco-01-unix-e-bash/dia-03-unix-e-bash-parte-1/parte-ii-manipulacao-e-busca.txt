@@ -1,0 +1,985 @@
+Parte I - Comandos de Input e Output
+
+1- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$
+
+2- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat > skills2.txt
+Internet
+Unix
+Bash
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$
+
+3- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat >> skills2.txt
+Logica
+Atencao
+Concentracao
+Solucao
+Colaboracao
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat skills2.txt 
+Internet
+Unix
+Bash
+Logica
+Atencao
+Concentracao
+Solucao
+Colaboracao
+
+4- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ wc -l skills2.txt 
+8 skills2.txt
+
+5- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ sort < skills2.txt | head -n 3 > top_skills.txt
+
+6- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat > phrases2.txt 
+Serei um excelente dev.
+Nunca diga nunca, mesmo eu tendo escrito 2x.
+Bora lá!    
+
+7- [ERRO] devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ wc -l -v "br" phrases2.txt
+wc: invalid option -- 'v'
+Try 'wc --help' for more information.
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ grep br phrases2.txt | wc -l
+0
+
+8- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ grep -v br phrases2.txt | wc -l
+3
+
+9- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat >> phrases2.txt
+Brasil
+Portugal
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat phrases2.txt
+Serei um excelente dev.
+Nunca diga nunca, mesmo eu tendo escrito 2x.
+Bora lá!
+Brasil
+Portugal
+
+10- [ERRO] devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ touch bunch_of_things.txt >> phrases2.txt countries.txt 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat bunch_of_things.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ rm bunch_of_things.txt 
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls
+countries.txt  empty.pdf  empty.tbt  phrases2.txt  phrases.txt  skills2.txt  top_skills.txt
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cp countries.txt bunch_of_things.txt
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat phrases2.txt >> bunch_of_things.txt
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat bunch_of_things.txt
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Romania
+Russian Federation
+Rwanda
+St Kitts & Nevis
+St Lucia
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+ZimbabweSerei um excelente dev.
+Nunca diga nunca, mesmo eu tendo escrito 2x.
+Bora lá!
+Brasil
+Portugal
+
+11- [ERRO] devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ sort bunch_of_things.txt
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bora lá!
+Bosnia Herzegovina
+Botswana
+Brasil
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Nunca diga nunca, mesmo eu tendo escrito 2x.
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Portugal
+Qatar
+Romania
+Russian Federation
+Rwanda
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+St Kitts & Nevis
+St Lucia
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+ZimbabweSerei um excelente dev.
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat bunch_of_things.txt
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Romania
+Russian Federation
+Rwanda
+St Kitts & Nevis
+St Lucia
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+ZimbabweSerei um excelente dev.
+Nunca diga nunca, mesmo eu tendo escrito 2x.
+Bora lá!
+Brasil
+Portugal
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ sort bunch_of_things.txt -o bunch_of_things.txt
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ cat bunch_of_things.txt
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bora lá!
+Bosnia Herzegovina
+Botswana
+Brasil
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Nunca diga nunca, mesmo eu tendo escrito 2x.
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Portugal
+Qatar
+Romania
+Russian Federation
+Rwanda
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+St Kitts & Nevis
+St Lucia
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+ZimbabweSerei um excelente dev.
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$
+
+---------- x ----------   ---------- x ----------   ---------- x ----------   ---------- x ----------   ---------- x ----------   ------- x -------
+
+Parte II - Permissões
+
+1- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$
+
+2- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls -l
+total 24
+-rw-rw-r-- 1 devbm devbm 1937 out 24 16:42 bunch_of_things.txt
+-rw-rw-r-- 1 devbm devbm 1842 out 24 16:37 countries.txt
+-rw-rw-r-- 1 devbm devbm    0 out 23 21:06 empty.pdf
+-rw-rw-r-- 1 devbm devbm    0 out 23 21:06 empty.tbt
+-rw-rw-r-- 1 devbm devbm   95 out 24 16:35 phrases2.txt
+-rw-rw-r-- 1 devbm devbm    9 out 24 15:27 phrases.txt
+-rw-rw-r-- 1 devbm devbm   67 out 24 16:10 skills2.txt
+-rw-rw-r-- 1 devbm devbm   25 out 24 16:26 top_skills.txt
+
+3- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ chmod a+rw bunch_of_things.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls -l
+total 24
+-rw-rw-rw- 1 devbm devbm 1937 out 24 16:42 bunch_of_things.txt
+-rw-rw-r-- 1 devbm devbm 1842 out 24 16:37 countries.txt
+-rw-rw-r-- 1 devbm devbm    0 out 23 21:06 empty.pdf
+-rw-rw-r-- 1 devbm devbm    0 out 23 21:06 empty.tbt
+-rw-rw-r-- 1 devbm devbm   95 out 24 16:35 phrases2.txt
+-rw-rw-r-- 1 devbm devbm    9 out 24 15:27 phrases.txt
+-rw-rw-r-- 1 devbm devbm   67 out 24 16:10 skills2.txt
+-rw-rw-r-- 1 devbm devbm   25 out 24 16:26 top_skills.txt
+
+4- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ chmod a-w bunch_of_things.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls -l
+total 24
+-r--r--r-- 1 devbm devbm 1937 out 24 16:42 bunch_of_things.txt
+-rw-rw-r-- 1 devbm devbm 1842 out 24 16:37 countries.txt
+-rw-rw-r-- 1 devbm devbm    0 out 23 21:06 empty.pdf
+-rw-rw-r-- 1 devbm devbm    0 out 23 21:06 empty.tbt
+-rw-rw-r-- 1 devbm devbm   95 out 24 16:35 phrases2.txt
+-rw-rw-r-- 1 devbm devbm    9 out 24 15:27 phrases.txt
+-rw-rw-r-- 1 devbm devbm   67 out 24 16:10 skills2.txt
+-rw-rw-r-- 1 devbm devbm   25 out 24 16:26 top_skills.txt
+
+5- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ chmod 644 bunch_of_things.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$ ls -l
+total 24
+-rw-r--r-- 1 devbm devbm 1937 out 24 16:42 bunch_of_things.txt
+-rw-rw-r-- 1 devbm devbm 1842 out 24 16:37 countries.txt
+-rw-rw-r-- 1 devbm devbm    0 out 23 21:06 empty.pdf
+-rw-rw-r-- 1 devbm devbm    0 out 23 21:06 empty.tbt
+-rw-rw-r-- 1 devbm devbm   95 out 24 16:35 phrases2.txt
+-rw-rw-r-- 1 devbm devbm    9 out 24 15:27 phrases.txt
+-rw-rw-r-- 1 devbm devbm   67 out 24 16:10 skills2.txt
+-rw-rw-r-- 1 devbm devbm   25 out 24 16:26 top_skills.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios/modulo-01-fundamentos/bloco-01-unix-e-bash/aula-aovivo/unix_tests$
+
+---------- x ----------   ---------- x ----------   ---------- x ----------   ---------- x ----------   ---------- x ----------   ------- x -------
+
+Parte III - Processos & Jobs
+
+---------- x ----------   ---------- x ----------   ---------- x ----------   ---------- x ----------   ---------- x ----------   ------- x -------
+
+(Bônus) - Parte IV - O despertar do terminal
+
+
+
+Recapitulando...
+Agora que você passou um bom tempo estudando sobre o Unix e seus comandos, sabemos que você já entende que:
+
+O Unix é um sistema operacional que inspirou muitos outros sistemas, como MacOS, Linux, Solaris etc.;
+O Unix é composto basicamente pelo Shell, Kernel e os programas;
+A estrutura de diretórios do Unix é organizada no formato de uma árvore invertida, de forma hierárquica, iniciando pelo root (raiz);
+Tudo no Unix é um arquivo ou um processo;
+O terminal é seu principal aliado para ter produtividade em ambiente Unix;
+
+Depois de entender como abrir e utilizar o terminal, você aprendeu na prática como utilizar os comandos Bash. Vamos relembrar alguns dos comandos que você aprendeu a usar.
+Um bom exercício é, mentalmente, tentar descrever o que cada comando faz.
+
+ls
+mkdir
+cd
+pwd
+cp
+mv
+rm
+rmdir
+clear
+cat
+less
+head
+tail
+grep
+wc
+>
+>>
+|
+sort
+who
+man
+whatis
+apropos
+*
+?
+chmod
+ps
+bg
+kill
+find
+history .
+
+

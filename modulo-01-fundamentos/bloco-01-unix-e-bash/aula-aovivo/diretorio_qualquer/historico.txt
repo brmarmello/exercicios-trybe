@@ -1,0 +1,3 @@
+  729  tail -2 ../animais/animais_fofinhos.txt 
+  730  history | tail -3
+  731  history | tail -3 > historico.txt
