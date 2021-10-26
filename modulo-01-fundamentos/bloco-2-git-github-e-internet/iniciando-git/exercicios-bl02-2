@@ -1,0 +1,183 @@
+1- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$
+
+2- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch master
+nothing to commit, working tree clean
+
+3- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch trybe-skills-changes
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch
+* master
+  trybe-skills-changes
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git checkout trybe-skills-changes 
+Switched to branch 'trybe-skills-changes'
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch
+  master
+* trybe-skills-changes
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch trybe-skills-changes
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/trybe-skills2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+4- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git add .
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch trybe-skills-changes
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/trybe-skills2.txt
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git commit -m "Criei copia do arquivo de soft skills e incluí mais 2 habilidades neste arquivo. O arquivo é o trybe-skills2.txt."
+[trybe-skills-changes dd03f21] Criei copia do arquivo de soft skills e incluí mais 2 habilidades neste arquivo. O arquivo é o trybe-skills2.txt.
+ 1 file changed, 7 insertions(+)
+ create mode 100644 modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/trybe-skills2.txt
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch trybe-skills-changes
+nothing to commit, working tree clean
+
+5- [ERRO] devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git push -u origin trybe-skills-changes
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git remote -v
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git push -u origin trybe-skills-changes
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git remote add origin git@github.com:brmarmello/exercicios-trybe.git
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git push -u origin trybe-skills-changes
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 590 bytes | 590.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'trybe-skills-changes' on GitHub by visiting:
+remote:      https://github.com/brmarmello/exercicios-trybe/pull/new/trybe-skills-changes
+remote: 
+To github.com:brmarmello/exercicios-trybe.git
+ * [new branch]      trybe-skills-changes -> trybe-skills-changes
+Branch 'trybe-skills-changes' set up to track remote branch 'trybe-skills-changes' from 'origin'.
+
+6- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git checkout master
+Switched to branch 'master'
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch
+* master
+  trybe-skills-changes
+
+7- [ERRO] devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git checkout -b branch trybe-skills-updates
+fatal: 'trybe-skills-updates' is not a commit and a branch 'branch' cannot be created from it
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch
+* master
+  trybe-skills-changes
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch branch trybe-skills-updates
+fatal: Not a valid object name: 'trybe-skills-updates'.
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch branch trybe-skills-updates
+fatal: Not a valid object name: 'trybe-skills-updates'.
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch branch trybe-skills-up
+fatal: Not a valid object name: 'trybe-skills-up'.
+
+8- devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch trybe-skills-updates
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch 
+* master
+  trybe-skills-changes
+  trybe-skills-updates
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git checkout trybe-skills-updates
+Switched to branch 'trybe-skills-updates'
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch 
+  master
+  trybe-skills-changes
+* trybe-skills-updates
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ ls -a
+.  ..  .git  modulo-01-fundamentos  modulo-02-des-front-end  modulo-03-back-end  modulo-04-computer-science  README.md
+
+9- [ERRO] devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git add trybe-skills2.txt
+fatal: pathspec 'trybe-skills2.txt' did not match any files
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ cd /home/devbm/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git$ git add trybe-skills2.txt
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git$ cd ..
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-2-git-github-e-internet$ cd ..
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos$ cd ..
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch trybe-skills-updates
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/trybe-skills2.txt
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git commit -m "Nova edicao do arquivo soft skills, a terceira, agora na terceira branch criada."
+[trybe-skills-updates 0ff1c10] Nova edicao do arquivo soft skills, a terceira, agora na terceira branch criada.
+ 1 file changed, 6 insertions(+)
+ create mode 100644 modulo-01-fundamentos/bloco-2-git-github-e-internet/iniciando-git/trybe-skills2.txt
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch trybe-skills-updates
+nothing to commit, working tree clean
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git remote add origin git@github.com:brmarmello/exercicios-trybe.git
+fatal: remote origin already exists.
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ it push -u origin trybe-skills-updates
+it: command not found
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git push -u origin trybe-skills-updates
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 574 bytes | 574.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'trybe-skills-updates' on GitHub by visiting:
+remote:      https://github.com/brmarmello/exercicios-trybe/pull/new/trybe-skills-updates
+remote: 
+To github.com:brmarmello/exercicios-trybe.git
+ * [new branch]      trybe-skills-updates -> trybe-skills-updates
+Branch 'trybe-skills-updates' set up to track remote branch 'trybe-skills-updates' from 'origin'.
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch trybe-skills-updates
+Your branch is up to date with 'origin/trybe-skills-updates'.
+
+nothing to commit, working tree clean
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$
+
+Após foi terminado no servidor remoto.
