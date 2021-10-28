@@ -1,0 +1,107 @@
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git status
+On branch exercicios/3.1
+Your branch is up to date with 'origin/exercicios/3.1'.
+
+nothing to commit, working tree clean
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch
+* exercicios/3.1
+  master
+  trybe-skills-changes
+  trybe-skills-updates
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch master
+fatal: A branch named 'master' already exists.
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch
+* exercicios/3.1
+  master
+  trybe-skills-changes
+  trybe-skills-updates
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git checkout master
+Switched to branch 'master'
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch
+  exercicios/3.1
+* master
+  trybe-skills-changes
+  trybe-skills-updates
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 657 bytes | 657.00 KiB/s, done.
+From github.com:brmarmello/exercicios-trybe
+ * branch            master     -> FETCH_HEAD
+Updating 9405f4d..bc5f50c
+Fast-forward
+ .../images/Anderson.png                            | Bin 0 -> 343804 bytes
+ .../images/Conrado.png                             | Bin 0 -> 332729 bytes
+ .../images/Gabriel.png                             | Bin 0 -> 335916 bytes
+ .../images/nones.jpeg                              | Bin 0 -> 166149 bytes
+ .../images/smile.jpg                               | Bin 0 -> 252390 bytes
+ .../portfolio-bmdev-sbs.txt                        | 159 +++++++++++++++++++++
+ .../trybe_marketing-sbs.txt                        | 108 ++++++++++++++
+ .../trybe_marketing.html                           |  95 ++++++++++++
+ modulo-02-des-front-end/dinamica-post-it.png       | Bin 0 -> 101319 bytes
+ 9 files changed, 362 insertions(+)
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/Anderson.png
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/Conrado.png
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/Gabriel.png
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/nones.jpeg
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/smile.jpg
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/portfolio-bmdev-sbs.txt
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/trybe_marketing-sbs.txt
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/trybe_marketing.html
+ create mode 100644 modulo-02-des-front-end/dinamica-post-it.png
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch exercicios/3.2
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git checkout exercicios/3.2
+Switched to branch 'exercicios/3.2'
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe$ git branch
+  exercicios/3.1
+* exercicios/3.2
+  master
+  trybe-skills-changes
+  trybe-skills-updates
+  
+  devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git branch
+  exercicios/3.1
+* exercicios/3.2
+  master
+  trybe-skills-changes
+  trybe-skills-updates
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git add .
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git commit -m " Atualizando fontes."
+[exercicios/3.2 4038210]  Atualizando fontes.
+ 3 files changed, 6 insertions(+), 305 deletions(-)
+ delete mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/portfolio-bmdev-sbs.txt
+ delete mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/trybe_marketing-sbs.txt
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git pushEnumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 610 bytes | 610.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:brmarmello/exercicios-trybe.git
+   65041d6..4038210  exercicios/3.2 -> exercicios/3.2
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-intros/oos/boosos/bloosoos/bosoooos/bos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git branch
+  exercicios/3.1
+* exercicios/3.2
+  master
+  trybe-skills-changes
+  trybe-skills-updates
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git add .
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git commit -m "Finalizando as atividades praticas da aula 3.2 - pagina de mktg."
+[exercicios/3.2 0e77615] Finalizando as atividades praticas da aula 3.2 - pagina de mktg.
+ 1 file changed, 220 insertions(+), 101 deletions(-)
+ rewrite modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/trybe_marketing.html (69%)
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 2.76 KiB | 943.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:brmarmello/exercicios-trybe.git
+   4038210..0e77615  exercicios/3.2 -> exercicios/3.2
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina
