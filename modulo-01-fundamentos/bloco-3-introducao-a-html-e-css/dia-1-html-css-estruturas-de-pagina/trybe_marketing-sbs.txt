@@ -1,0 +1,108 @@
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git status
+On branch exercicios/3.1
+Your branch is ahead of 'origin/exercicios/3.1' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   trybe_marketing.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git add .
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git commit -m "Estrutura Inicial."
+[exercicios/3.1 ba8e313] Estrutura Inicial.
+ 1 file changed, 10 insertions(+)
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git status
+On branch exercicios/3.1
+Your branch is ahead of 'origin/exercicios/3.1' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercdevbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-troducao-a-html-e-css/dia-1fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-d
+e-pagina$ g
+it status
+On branch exercicios/3.1
+Your branch is ahead of 'origin/exercicios/3.1' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   trybe_marketing.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        images/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exerc                                             icios-trybe/modulo-01-fundamentos/bloco-3-introdu                                         cao-a-html-e-css/dia-1-html-css-estruturas-de-pag                                     git add .
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git status
+On branch exercicios/3.1
+Your branch is ahead of 'origin/exercicios/3.1' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   images/SouTryber.png
+        new file:   images/SouTryber2.png
+        new file:   images/img-bmDev.jpeg
+        new file:   images/smile.jpg
+        modified:   trybe_marketing.html
+
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git commit -m "Estruturcao de conteudo."
+[exercicios/3.1 f00c199] Estruturcao de conteudo.
+ 5 files changed, 68 insertions(+), 2 deletions(-)
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/SouTryber.png
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/SouTryber2.png
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/img-bmDev.jpeg
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/smile.jpg
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git status                          On branch exercicios/3.1
+Your branch is ahead of 'origin/exercicios/3.1' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git push
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (22/22), 1.60 MiB | 2.01 MiB/s, done.
+Total 22 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+To github.com:brmarmello/exercicios-trybe.git
+   fbb1aa2..f00c199  exercicios/3.1 -> exercicios/3.1
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercdevbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-int
+roducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ g
+it add .
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git commit -m "Terminando o conteudo pratico da aula 1 live."
+[exercicios/3.1 a329368] Terminando o conteudo pratico da aula 1 live.
+ 1 file changed, 27 insertions(+), 8 deletions(-)
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git pushEnumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1019 bytes | 509.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:brmarmello/exercicios-trybe.git
+   f00c199..a329368  exercicios/3.1 -> exercicios/3.1
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git add .devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git commit -m "Terminando o conteudo pratico da aula 1 live - EDIT com as fotos agora das pessoas reais."
+[exercicios/3.1 b24f56e] Terminando o conteudo pratico da aula 1 live - EDIT com as fotos agora das pessoas reais.
+ 8 files changed, 4 insertions(+), 4 deletions(-)
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/Anderson.png
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/Conrado.png
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/Gabriel.png
+ delete mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/SouTryber.png
+ delete mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/SouTryber2.png
+ delete mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/img-bmDev.jpeg
+ create mode 100644 modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina/images/nones.jpeg
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ git pushEnumerating objects: 17, done.Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 1.13 MiB | 7.73 MiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:brmarmello/exercicios-trybe.git
+   a329368..b24f56e  exercicios/3.1 -> exercicios/3.1
+devbm@dtbm:~/Documents/TIdevBM/Trybe/Course/exercicios-trybe/modulo-01-fundamentos/bloco-3-introducao-a-html-e-css/dia-1-html-css-estruturas-de-pagina$ 
