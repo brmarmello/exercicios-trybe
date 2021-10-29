@@ -79,3 +79,17 @@ li {
 .market-text p {
   margin-bottom: 30px;
 }
+.student-testimonial {
+  width: 80%;
+  padding: 30px 70px 90px 70px;
+  margin: auto;
+}
+.student-container {
+  display: inline-block;
+  width: 30%;
+  margin: 10px;
+  vertical-align: middle;
+}
+.student-container p {
+  margin: 10px 0;
+}
