@@ -68,3 +68,14 @@ li {
 .header-text p {
   margin-bottom: 50%;
 }
+.market {
+  padding: 70px 30px;
+  text-align: center;
+}
+.market-text {
+  max-width: 60%;
+  margin: 50% auto;
+}
+.market-text p {
+  margin-bottom: 30px;
+}
