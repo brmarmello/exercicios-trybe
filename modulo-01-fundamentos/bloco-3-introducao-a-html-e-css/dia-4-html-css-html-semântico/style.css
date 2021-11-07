@@ -1,0 +1,20 @@
+.margin-body {
+  margin: 0 auto;
+}
+.header {
+  background-color: rgba(103, 56, 255, 0.85);
+  padding: 1px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.nav {
+  text-align: right;
+  background-color: rgba(127, 32, 252, 0.5);
+  padding: 1px;
+  max-width: 100%;
+}
+
+.ul li {
+  display: inline-block;
+}
