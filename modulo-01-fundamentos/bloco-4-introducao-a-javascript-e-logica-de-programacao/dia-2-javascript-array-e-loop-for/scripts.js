@@ -7,6 +7,7 @@ for (i = 0; i < numbers.length; i += 1) {
 } 
 */
 
+
 // Exercício 2 - Para o segundo exercício, some todos os valores contidos no array e imprima o resultado;
 /*
 let resultado = 0 ;
@@ -18,7 +19,9 @@ for (i=0; i < numbers.length; i+=1) {
 console.log(resultado);
 */
 
-// Exercício 3 - Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array; 4 - Com o mesmo código do exercício anterior, caso o valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
+
+// Exercício 3 - Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
+// Exercício 4 - Com o mesmo código do exercício anterior, caso o valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
 /*
 let media = 0;
 
@@ -35,33 +38,91 @@ if (media > 20) {
 }
 */
 
-// ************* HELPPPP ************* Exercício 5 - Utilizando for , descubra qual o maior valor contido no array e imprima-o;
-/*
-let maiorN = numbers[0]
 
-for (i=0; i < numbers.length; i+=1) {
-  
+// Exercício 5 - Utilizando for , descubra qual o maior valor contido no array e imprima-o; (RESOLVE-SE COM "FOR" OU "FOR OF").
+// 5.1 - UTILIZANDO O "FOR"
+/*
+let maiorN = 0;
+
+for (i=1; i < numbers.length; i+=1) {
+  if (numbers[i] > maiorN) {
+    maiorN = numbers[i];
+  }
 }
 
-console.log();
+console.log(maiorN);
+*/
+// 5.2 - UTILIZANDO O "FOR OF"
+/*
+let maiorN = 0;
+
+for (const num of numbers) {
+  if (num > maiorN) {
+    maiorN = num;
+  }
+}
+
+console.log(maiorN);
 */
 
 
-// ************* HELPPPP ************* Exercício 6 - Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado"
+// Exercício 6 - Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado"
+// 6.1 - Forma 1
 /*
-let valImp = [0];
+let valImp = [];
+let counter = 0;
 
 for (i=0; i < numbers.length; i+=1) {
-  valImp += (numbers[i] %2 !== 0);
+    if (numbers[i] % 2 !== 0) {
+      counter += 1;
+    }
 };
+
+console.log(counter);
+*/
+// 6.2 - Forma 2
+/*
+let valImp = [];
+
+for (i=0; i < numbers.length; i+=1) {
+  if (numbers[i] % 2 !== 0) {
+    valImp.push(numbers[i]);
+  };
+}
 
 console.log(valImp.length);
 */
 
-// ************* HELPPPP ************* Exercício 7 - Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+
+// Exercício 7 - Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+// 7.1 - UTILIZANDO O "FOR"
+/*
+let menorN = numbers[0];
+
+for (i=1; i < numbers.length; i += 1) {
+  if (numbers[i] < menorN) {
+    menorN = numbers[i];
+  }
+}
+
+console.log(menorN);
+*/
+// 7.2 - UTILIZANDO O "FOR OF"
+/*
+let menorN = numbers[0];
+
+for (const num of numbers) {
+  if (num < menorN) {
+    menorN = num;
+  };
+};
+
+console.log(menorN);
+*/
 
 
-// Exercício 8 - Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado; 9 - Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+// Exercício 8 - Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
+//Exercício  9 - Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
 /*
 let array = [];
 
@@ -77,5 +138,4 @@ for (i=0; i < array.length; i+=1) {
 */
 
 
-
-
+// BONUS!
