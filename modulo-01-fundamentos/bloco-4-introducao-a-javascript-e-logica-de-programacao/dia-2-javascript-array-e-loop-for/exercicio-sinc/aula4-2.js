@@ -21,7 +21,6 @@ let fruta2 = "Laranja";
 let frutas = [fruta1,fruta2,"abacaxi"]; */
 
 
-
 // saída de dados com arrays
 //console.log("saida: ", frutas)
 /* console.log("saida: ", frutas[0]);
@@ -30,7 +29,7 @@ console.log("saida: ", frutas[2]); */
 
 
 // entrada de dados em arrays
-    // DOC https://www.w3schools.com/jsref/jsref_obj_array.asp
+// DOC https://www.w3schools.com/jsref/jsref_obj_array.asp
 /* let frutas = [];
 frutas.push("Maça")
 frutas.push("Laranja")
@@ -40,10 +39,10 @@ console.log("frutas: ", frutas) */
 // tamanho do array
 //console.log("length: ", frutas.length      )
 
+
 // REVISÃO DO FOR c/ debuger  
 /* 
 let r = 0;
-
 
 for( i = 0 ; i < 20  ; i++){
     r += i;
