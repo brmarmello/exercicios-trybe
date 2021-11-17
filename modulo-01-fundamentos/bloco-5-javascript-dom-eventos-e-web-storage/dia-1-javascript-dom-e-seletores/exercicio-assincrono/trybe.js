@@ -1,3 +1,5 @@
+// AULA ASSÍNCRONA
+
 // Para ACESSAR o conteúdo de uma tag HTML pelo JS.
 /*
 // Imprime no console todo o conteúdo da Div. Aqui há o OBJETO que representa o ELEMENTO. Ex. Retorna: <p id="paragraph" style="color: red;">Dê uma cor para este parágrafo!</p>
