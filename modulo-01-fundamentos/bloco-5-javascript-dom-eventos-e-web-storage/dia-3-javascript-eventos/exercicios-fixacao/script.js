@@ -75,16 +75,16 @@ createDaysOfTheMonth()
 // Adicione a este botão a ID "btn-holiday" .
 // Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
 function createHolidayButton(buttonName) {
-  let buttonContainer = document.querySelector('.buttons-container')
-  let newButton = document.createElement('button')
-  let newButtonID = 'btn-holiday'
+  let buttonContainer = document.querySelector('.buttons-container') // Seleciona o elemento no qual add esse botão no documento.
+  let newButton = document.createElement('button') // Cria o botão com a função createElement, passando o tipo button para essa função.
+  let newButtonID = 'btn-holiday' // Cria a variável que guarda a string com o id desse botão.
 
-  newButton.innerHTML = buttonName
-  newButton.id = newButtonID
-  buttonContainer.appendChild(newButton)
+  newButton.innerHTML = buttonName // Add o nome do botão que recebemos como parâmetro na função à propriedade innerHTML desse elemento que acabou de ser criado.
+  newButton.id = newButtonID // Add o id ao botão.
+  buttonContainer.appendChild(newButton) // Add o botão como filho da div selecionada no início da função.
 }
 
-createHolidayButton('Feriados')
+createHolidayButton('Feriados') // Chama a função para que seja executada.
 
 // Exercício 3:
 // Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
@@ -149,6 +149,7 @@ displayFridays(dezFridays)
 
 // Exercício 6:
 // Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+// Dica - Propriedade: event.target (https://developer.mozilla.org/en-US/docs/Web/API/Event/target).
 function dayMouseOver() {
   let days = document.querySelector('#days')
 
@@ -238,3 +239,38 @@ function setDayColor() {
 }
 
 setDayColor()
+
+// Bônus:
+// Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+// Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
+// Ao pressionar a tecla "enter" o evento também deverá ser disparado.
+// Dica - Propriedade: key (https://www.w3schools.com/JSREF/event_key_key.asp).
+function addNewTask() {
+  let getInputField = document.querySelector('#task-input')
+  let addInputButton = document.querySelector('#btn-add')
+  let getTaskList = document.querySelector('.task-list')
+
+  addInputButton.addEventListener('click', function () {
+    if (getInputField.value.length > 0) {
+      let newLi = document.createElement('li')
+      newLi.innerText = getInputField.value
+
+      getTaskList.appendChild(newLi)
+      getInputField.value = ''
+    } else {
+      alert('Error: Digite ao menos 1 caractere.')
+    }
+  })
+
+  getInputField.addEventListener('keyup', function (event) {
+    if (event.key === 'Enter' && getInputField.value.length > 0) {
+      let newLi = document.createElement('li')
+      newLi.innerText = getInputField.value
+
+      getTaskList.appendChild(newLi)
+      getInputField.value = ''
+    }
+  })
+}
+
+addNewTask()
