@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Lecture 6.3</title>
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-container{
+      color: #fff;
+      background-color: #5995da;
+      padding: 20px 0px;
+    }
+    .menu{
+      display: flex;
+      justify-content:space-between;
+    }
+   
+    .header-container{
+      padding: 50px 0;
+      color: #5995da;
+      background-color:#d6e9fe ;
+    }
+    .header{
+      display: flex;
+      max-width: 900px;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      align-items: center;
+      /* align-content: center; */
+      margin: 0 auto;
+    }
+    .photo-grid-container{
+      display: flex;
+      justify-content: center;
+    }
+    .photo-grid{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 900px;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: #cccc;
+    }
+    .first-item, .first-item img{
+      height: 150px;
+      width: 300px;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    a:hover{
+      color: red;
+    }
+    .popup{
+     /*  visibility: hidden; */
+      display: none;
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background-color: red;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%); 
+      align-items: flex-start;
+    }
+    .close{
+      background-color: white;
+      padding: 20px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <section class="menu-container">
+    <nav class="menu">
+      <p class="date">Oct 16, 2019</p>
+      <section class="links">
+        <a href="#" class="signup">Sign Up</a>
+        <a href="" class="login">Login</a>
+      </section>
+    </nav>
+  </section>
+
+  <section class="header-container">
+    <header class="header">
+      <a href="" class="subscribe">Subscribe &#9662;</a>
+      <div class='logo'><img src='images/awesome-logo.svg'/></div>
+      <div class='social'><img src='images/social-icons.svg'/></div>
+    </header>
+  </section>
+
+  <section class="photo-grid-container">
+    <div class="photo-grid">
+      <div class="photo-grid-item first-item">
+          <img src='images/one.svg'/>
+      </div>
+      <div class="photo-grid-item second-item">
+          <img src='images/two.svg'/>
+      </div>
+      <div class="photo-grid-item">
+          <img src='images/three.svg'/>
+      </div>
+      <div class="photo-grid-item">
+          <img src='images/four.svg'/>
+      </div>
+      <div class="photo-grid-item last-item">
+          <img src='images/five.svg'/>
+      </div>
+    </div>
+  </section>
+
+  <div class="popup">
+   
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illum, perspiciatis, eveniet, minus aperiam dolores ut provident repellat qui id modi. Recusandae rem laudantium dicta impedit dignissimos aspernatur vel ipsum.</p>
+    <div class="close">X</div>
+  </div>
+  
+  <script>
+    let popup = document.querySelector('.popup')
+    let close = document.querySelector('.close')
+
+    setTimeout( function(){
+      popup.style.display = 'flex';
+    } , 5000 )
+
+    close.addEventListener('click', function(){
+      popup.style.display = 'none';
+    })
+  </script>
+  
+</body>
+</html>
