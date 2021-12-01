@@ -1,0 +1,31 @@
+{
+  "name": "sd-xp-a-live-lecture",
+  "version": "1.0.0",
+  "description": "Este repositório armazena os códigos e scripts fornecidos durante as aulas ao vivo pelos especialistas da Trybe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx",
+    "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tryber/sd-xp-a-live-lecture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tryber/sd-xp-a-live-lecture/issues"
+  },
+  "homepage": "https://github.com/tryber/sd-xp-a-live-lecture#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-trybe-fundamentals": "^1.1.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-sonarjs": "^0.9.1",
+    "stylelint": "13.11.0",
+    "stylelint-config-standard": "20.0.0"
+  }
+}
