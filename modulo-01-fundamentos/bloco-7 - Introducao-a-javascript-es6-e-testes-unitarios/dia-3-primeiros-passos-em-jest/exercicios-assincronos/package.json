@@ -1,0 +1,15 @@
+{
+  "name": "exercicios-assincronos",
+  "version": "1.0.0",
+  "description": "Atividade prática assíncrona da aula 7.3.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.4.3"
+  }
+}
