@@ -70,10 +70,17 @@ const expectedResult =
 
 function reduceNames() {
   // escreva seu código aqui
+  /*
   const names = books.reduce((acumulator, book, index, array) => {
     if (index === array.length - 1) return `${acumulator} ${book.author.name}.`;
     return `${acumulator} ${book.author.name},`;
   }, '');
   return names.trim();
+  */
+  const names = books.reduce((acumulator, book) => {
+    acumulator = `${acumulator} ${book.author.name}`
+    return acumulator;
+  }, '');
+  return names;
 }
 // console.log(reduceNames());
