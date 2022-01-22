@@ -1,0 +1,74 @@
+https://pt-br.reactjs.org
+https://github.com/facebook/react
+
+O React é a principal biblioteca de construção de UI's atualmente. Mas por quê? Quando falamos em React estamos geralmente nos referindo a todo o ecossistema que o envolve.
+
+>> React
+>> JSX
+>> Babel
+>> Webpack
+>> Flux/Redux
+>> fetch
+>> Jest/RTL
+
+A lista acima mostra algumas das tecnologias que fazem parte desse ecossistema e que te permitem criar aplicações Web de alta qualidade.
+
+A escolha do React tem a ver com a sua adoção, estabilidade, oportunidades e potencial longevidade.
+
+----------------------------------------------------------- xx -----------------------------------------------------------
+
+Dia 10.1 | Hello World no React
+
+JSX: Sintaxe do React que combina JS com HTML em um mesmo arquivo de maneira fácil de ler, escrevendo menos código e fazer mais coisa...
+REACT: Vamso ver como ele pega o código escrito e joga no navegador...
+CLASSES: A forma como o React propõe que organizemos nosso código separando ele em "pedaços" lógicos...
+
+
+O que é o NPM (node packge manager - Gerenciador de Pacotes do Node):
+São pacotes de cógigos feitos por outras pessoas.
+
+https://www.npmjs.com/package/uuid
+Pacote - uuid = gera um id único de 16 caracteres.
+
+
+
+pq é utilizado e como utulizar:
+
+
+
+
+
+
+Iniciar projeto react do 0.
+
+npx create-react-app helloword
+cd helloword
+npm start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
