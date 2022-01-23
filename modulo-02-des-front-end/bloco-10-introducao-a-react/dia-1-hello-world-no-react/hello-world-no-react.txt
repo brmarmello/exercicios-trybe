@@ -19,56 +19,51 @@ A escolha do React tem a ver com a sua adoção, estabilidade, oportunidades e p
 
 Dia 10.1 | Hello World no React
 
+
+SABEREMOS AQUI:
+
+A melhor forma para instalar um gerenciador de pacotes.
+Inicializar um projeto em React
+Utilizar JSX no React
+Utilizar o ReactDOM.render para renderizar elementos numa página web.
+Utilizar o import para usar código externo junto ao seu.
+
+
 JSX: Sintaxe do React que combina JS com HTML em um mesmo arquivo de maneira fácil de ler, escrevendo menos código e fazer mais coisa...
 REACT: Vamso ver como ele pega o código escrito e joga no navegador...
 CLASSES: A forma como o React propõe que organizemos nosso código separando ele em "pedaços" lógicos...
 
 
+Gerenciador de pacotes:
+
 O que é o NPM (node packge manager - Gerenciador de Pacotes do Node):
 São pacotes de cógigos feitos por outras pessoas.
-
+EX.:
 https://www.npmjs.com/package/uuid
 Pacote - uuid = gera um id único de 16 caracteres.
 
 
-
-pq é utilizado e como utulizar:
-
-
-
-
-
-
+como utulizar:
 Iniciar projeto react do 0.
 
-npx create-react-app helloword
-cd helloword
+npx create-react-app helloworld
+cd helloworld
 npm start
 
 
+O React é, atualmente, uma das principais bibliotecas Javascript para construção de interfaces de usuário. Esta poderosa ferramenta foi criada pelos times de desenvolvimento do Facebook com objetivo de organizar, componentizar e, consequentemente, tornar muito mais eficiente cada parte das aplicações que a utilizam.
+
+Vamos conhecer agora o ecossistema que envolve essa tecnologia, começando pelo JSX .
+
+Uma classe e uma função parecem exatamente a mesma coisa, afinal, ambas recebem atributos e nós as chamamos em seguida. Porém, uma classe pode possuir métodos , que nada mais são do que ações que toda entidade criada a partir de uma classe pode realizar.
+Podemos atribuir vários métodos - os quais podem, inclusive, alterar o próprio estado do objeto. Por enquanto, só precisamos saber que métodos existem e não precisamos nos preocupar, pois veremos com detalhes os métodos de classe mais adiante em React , junto com estado da aplicação .
+Em React , classe é uma das formas de renderizar os componentes na página. Então quando um componente precisa ser alterado, utilizamos componentes de classe, para que possamos utilizar seus estados para realizar essas alterações. Mas não se preocupe, você verá isso em breve com muito mais detalhamento.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Conclusão
+Vimos que React funciona mais ou menos como um monta-monta, você tem várias peças pequenas (os componentes) que são combinados para fazer uma tela completa.
+Esses componentes podem ser componentes de função (que não podem alterar seus estados) e componentes de classe (que podem alterar seus estados).
+Para alterar os estados dos componentes de classe, utilizamos os métodos, que vamos ver a sintaxe com detalhes mais adiante no curso.
 
 
 
