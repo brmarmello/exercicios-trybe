@@ -1,0 +1,156 @@
+SABEREMOS AQUI:
+
+Criar componentes React corretamente;
+Fazer uso de props corretamente;
+Fazer composição de componentes corretamente;
+Criar múltiplos componentes dinamicamente.
+Utilizar PropTypes para checar o tipo de uma prop no uso de um componente;
+Utilizar PropTypes para garantir a presença de props obrigatórias no uso de um componente;
+Utilizar PropTypes para checar que uma prop é um objeto de formato específico;
+Utilizar PropTypes para garantir que uma prop é um array com elementos de um determinado tipo.
+
+Por que isso é importante?
+Uma aplicação desenvolvida em React é composta de componentes. Ou seja, eles são as peças de lego que serão combinadas de forma a construir toda a aplicação! Logo, saber usar componentes é saber montar do zero uma aplicação React. A checagem de tipos é outra parte disso: ela economiza muito tempo de desenvolvimento, protegendo quem desenvolve de cometer erros facilmente evitáveis na utilização dos componentes.
+
+
+Como já sabemos, componentes são a base de toda aplicação React . Eles nos permitem segmentar uma página web em blocos de códigos independentes e reutilizáveis , além de tornarem o ambiente de desenvolvimento um local mais organizado. Conceitualmente, componentes React são funções ou classes JavaScript que podem aceitar parâmetros, chamados de props (do inglês properties ), e retornam elementos React responsáveis por determinarem o que será renderizado na tela.
+
+Existem duas maneiras de definirmos um componente:
+I - Via função JavaScript:
+  function Greeting(props) {
+    return (<h1>Hello, {props.name}</h1>);
+  }
+
+  export default Greeting;
+  
+II - Via classe :
+  import React from 'react';
+
+  class Greeting extends React.Component {
+    render() {
+      return (<h1>Hello, {this.props.name}</h1>);
+    }
+  }
+
+  export default Greeting;
+
+
+Neste momento, acabamos de aprender os conceitos básicos de um componente.
+Vamos reforçar cada um deles com este componente de exemplo!
+
+import React from 'react';
+
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+export default Greeting;
+
+Analisando o código acima, temos:
+1 - A declaração de um componente chamado Greeting .
+2 - O componente Greeting herda da classe Component da biblioteca react .
+3 - O componente Greeting descreve o que vai ser mostrado para quem usar a aplicação , declarado no método obrigatório render . Nesse caso, Greeting retorna: <h1>Hello, {this.props.name}</h1> .
+4 - O componente Greeting possui como propriedade um objeto chamado props , que contém todos os dados passados como parâmetro na hora de chamar um componente. Ou seja, chamar <Greeting name="Samuel" /> faz com que o componente tenha uma prop igual a { name: "Samuel" } .
+5 - Exportamos o componente Greeting de forma que ele possa ser reutilizado na aplicação.
+
+
+>>> Props:
+As props são umas das partes mais importantes de um componente. São por elas que você passa os valores para o componente, e é como o torna reutilizável em diferentes contextos.
+Elas são como os parâmetros de uma função. 
+
+Lembrando que, assim como podemos ter vários parâmetros em uma função, conseguimos também passar inúmeras propriedades para o componente por meio das props.
+
+
+>>> Composição de componentes:
+Antes de nos aprofundarmos no assunto, vamos dar um passo para trás e refletir: de forma geral, o que é composição? São elementos ordenados de forma a constituir algo maior e mais complexo. São, por exemplo, as músicas em um álbum musical, as frutas em uma salada de frutas ou até mesmo os inputs , as labels e os buttons em um form.
+
+Componentes React podem conter um ou mais componentes! Essa é uma funcionalidade muito importante do React , pois permite a reutilização e a redução do nível de complexidade de códigos.
+
+ASSISTIR VÍDEO SOBRE: Composição de componentes
+https://app.betrybe.com/course/front-end/introducao-a-react/componentes-react/0115c033-cfc0-48bc-bcf5-812b599ee79a/conteudos/e80237ee-27b0-4e38-9941-c3ad4a18509c/composicao-de-componentes/3936c3ed-4658-48b4-a5b9-ed93f11ce78a?use_case=side_bar
+
+
+>>> Lista de componentes e chaves:
+
+
+>>> PropTypes, checagem de tipos:
+MeuComponente.propTypes = {
+  // Todos os validadores aqui são, por padrão, validadores opcionais.
+  // Para torná-los obrigatórios basta adicionar .isRequired
+  numeroObrigatório: PropTypes.number.isRequired,
+
+  // Tipos básico do JS.
+  stringOpcional: PropTypes.string,
+  numeroOpcional: PropTypes.number,
+  booleanoOpcional: PropTypes.bool,
+  funcaoOpcional: PropTypes.func,
+  objetoOpcional: PropTypes.object,
+  arrayOpcional: PropTypes.array,
+
+  // Um array de determinado tipo básico
+  arrayDe: PropTypes.arrayOf(PropTypes.number),
+
+  // Um objeto de determinado tipo básico
+  objetoDe: PropTypes.objectOf(PropTypes.number),
+
+  // Um objeto com forma específica
+  objetoComForma: PropTypes.shape({
+    name: PropTypes.string,
+    age: PropTypes.number,
+  }),
+
+  // Um objeto que não permite props extras
+  objetoComFormatoRigoroso: PropTypes.exact({
+    name: PropTypes.string,
+    quantity: PropTypes.number,
+    avaibility: PropTypes.bool,
+  }),
+};
+
+ASSISTIR VÍDEO SOBRE: PropTypes, checagem de tipos
+https://app.betrybe.com/course/front-end/introducao-a-react/componentes-react/0115c033-cfc0-48bc-bcf5-812b599ee79a/conteudos/e80237ee-27b0-4e38-9941-c3ad4a18509c/proptypes-checagem-de-tipos/de0f34ac-c606-4217-a738-d16a245da6a4?use_case=side_bar
+
+FAZER O QUIZ SOBRE: PropTypes, checagem de tipos
+https://app.betrybe.com/course/front-end/introducao-a-react/componentes-react/0115c033-cfc0-48bc-bcf5-812b599ee79a/fixando-os-aprendizados/95?use_case=next_button
+
+FAZER O QUIZ SOBRE: Aprendizagem geral de todo o bloco 10.
+https://app.betrybe.com/course/front-end/introducao-a-react/componentes-react/0115c033-cfc0-48bc-bcf5-812b599ee79a/fixando-os-aprendizados-do-bloco/32?use_case=next_button
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
