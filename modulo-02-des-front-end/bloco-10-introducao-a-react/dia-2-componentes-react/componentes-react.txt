@@ -10,8 +10,8 @@ Utilizar PropTypes para checar que uma prop é um objeto de formato específico;
 Utilizar PropTypes para garantir que uma prop é um array com elementos de um determinado tipo.
 
 Por que isso é importante?
-Uma aplicação desenvolvida em React é composta de componentes. Ou seja, eles são as peças de lego que serão combinadas de forma a construir toda a aplicação! Logo, saber usar componentes é saber montar do zero uma aplicação React. A checagem de tipos é outra parte disso: ela economiza muito tempo de desenvolvimento, protegendo quem desenvolve de cometer erros facilmente evitáveis na utilização dos componentes.
-
+Uma aplicação desenvolvida em React é composta de componentes. Ou seja, eles são as peças de lego que serão combinadas de forma a construir toda a aplicação!
+Logo, saber usar componentes é saber montar do zero uma aplicação React. A checagem de tipos é outra parte disso: ela economiza muito tempo de desenvolvimento, protegendo quem desenvolve de cometer erros facilmente evitáveis na utilização dos componentes.
 
 Como já sabemos, componentes são a base de toda aplicação React . Eles nos permitem segmentar uma página web em blocos de códigos independentes e reutilizáveis , além de tornarem o ambiente de desenvolvimento um local mais organizado. Conceitualmente, componentes React são funções ou classes JavaScript que podem aceitar parâmetros, chamados de props (do inglês properties ), e retornam elementos React responsáveis por determinarem o que será renderizado na tela.
 
