@@ -1,3 +1,238 @@
 Componentes com estado e eventos:
+Aprofunda o conhecimento sobre Componentes React com o conceito de Estado.
+
+>>>>> INTRODUÇÃO AO ESTADO: <<<<<
+
+Um estado representa um momento de um componente dinâmico.
+O Estado é uma informação que a aplicação precisa guardar para funcionar.
+Se o seu componente é um relógio, o estado atual dele é a hora atual.
+Se o seu componente é uma tabela cujo conteúdo muda de acordo com o que o usuário clica na página, o estado dele contém o conteúdo da tabela.
+Se o seu componente fosse um jogo de videogame, o estado seria o momento em que você está no jogo, a sua quantidade de vidas, munição, itens etc.
+Estado é, então, um momento de algo que pode mudar ao longo do tempo (dinâmico).
+É uma informação que você quer preservar enquanto o componente está interagindo com quem usa.
+
+Além disso, vamos ver como adicionamos os famosos eventos (que já usamos tanto no JavaScript) nos nossos componentes React.
+
+
+SABEREMOS AQUI:
+
+Ler o estado de um componente e usá-lo para alterar o que exibimos no browser;
+Inicializar um componente, dando a ele um estado pré-definido;
+Atualizar o estado de um componente.
+Capturar eventos utilizando a sintaxe do React
+
+
+Por que isso é importante?
+O estado dos componentes é o que dá dinamismo às páginas do React , de acordo com a interação de quem usa.
+Ele é uma abstração essencial para o desenvolvimento de páginas mais ricas e interativas, que respondem a inputs do usuário e se atualizam em função disso.
+Se os "componentes" são a faca do React , o "estado" e os "eventos" são o queijo.
+
+
+O que é o "Estado de um Componente"?
+
+Onde a aplicação guarda as informações? Numa variável dentro da classe, como talvez fizéssemos no JS puro? NÃO! O React não permite isso.
+OBS.: O React não permite que tenhamos uma variável solta dentro da classe para guardar o estado do componente. O React SÓ permite FUNÇÕES dentro da classe.
+
+Numa variável dentro da classe, como talvez fizéssemos no JS puro? NÃO!
+Isso vai totalmente contra o propósito de se agregar lógicas em classes e componentes!
+
+Numa variável dentro da função Render? NÃO!
+Toda vez que algo muda, como por exemplo uma PROP, o componente é renderizado novamente! Ele deve PREZERVAR O ESTADO diante dessas mudanças.
+
+... ONDE ENTÃO GUARDAMOS?
+R.: No Estado do Componente!
+Cada componente terá seu próprio Estado e um não enxerga o Estado do outro, NUNCA! Mesmo entre componentes pais e filhos.
+
+OBS.: As informações devem persistir em ficar guardadas no Estado do Componente ENQUANTO A TELA NÃO FOR FECHADA OU ATUALIZADA!
+É o filtro selecionado, o item da lista destacado, o carrinho de compras, tudo isso e mais!
+Essa é, talvez, a peça mais essencial para o funcionamento do React.
+
+
+Antes de aprofundar nos Estados daremos um passo atrás nos EVENTOS.
+INTRODUÇÃO AOS EVENTOS:
+Eventos são como os "eventListeners" estudados anteriormentes. São as mesmas definições dos Eventos no JS puro. A diferença no React está na forma como ligamos o ELEMENTO QUE ESTÁ REAGINDO à AÇÃO QUE ELE IRÁ EXECUTAR.
+Para isso precisamos estudar e entender como funciona no JS o "this" e o "bind" para como que o React funcione!
+
+*** Vinculando "funções à classe" com "this e bind" no "constructor": ***
+
+** this: **
+O this é um grande objeto JS que representa aquela classe em questão, aquele compontente em questão com tudo que ele tem, ou seja, qualquer props; qualquer estado e tudo mais que se refere ao componente JS estará nesse objeto.
+O this é o objeto JS que o React cria e entrega pra nós.
+
+** Função constructor(): **
+Para aprofundar no this, precisamos primeiro falar de outra Função que TODA classe JS e React PODE ter definida. 
+É a "Função constructor()". É uma Função, que assim como a "render()", é uma Função que faz parte da lógica interna do React que a gente pega quando pegamos o "extends". 
+Quando o React por trás dos panos vai renderizar nosso elemento, faz uma série de coisas... ele executa a renderização do elemento, a criação do elemento na tela obedece a uma série de passos e uma função dentre as várias que ele executa antes de renderizar o elemento é a Função constructor().
+Nó podemos redeclarar essa Função constructor() dentro da classe e adicionar a ela um comportamento que a gente queira, desde que dentro da lógica dela coloquemos uma outra Função, a "Função super()" e abaixo da super escrever nossa lógica, para assim poder juntar a funcionalidade da lógica ue a Função constructor() já traz com ela com a lógica que estamos atribuindo a ela e assim ela é executada sobrescrevendo a lógica dela.
+
+Toda classe em JavaScript tem acesso a um método chamado constructor(), e com as classes de React, definidas com class MinhaClasse extends React.Component, não é diferente!
+Quando um componente React é criado, ou seja, quando é colocado na tela do navegador, a primeira coisa que é executada é a função constructor().
+Toda a lógica interna que o React adiciona aos seus componentes começa a ser inclusa neles nesse momento.
+
+No JavaScript, o super() refere-se ao construtor da classe pai. (No nosso caso, refere-se à implementação de React.Component).
+É importante lembrar que você não pode usar o this em um construtor até que você tenha chamado o construtor da classe pai, o JavaScript não vai te deixar fazer isso.
+Então, por hora, apenas lembre-se que para usar o this dentro do constructor() é preciso chamar o super() antes.
+Ter isso em mente vai ser muito importante ao lidar com estados nas classes!
+
+SIMPLIFICANDO:
+Escrevemos a sintaxe
+"this.nomeDaNossaFunção = this.nomeDaNossaFunção.blind(this)"
+para Nossa Função conseguir enxergar o this.
+Estamos falando:
+"essa nossa função está ligada ao this".
+Isso é importante porque se na nossa função a gente quiser chamar o this.props, por exemplo, a gente tem que fazer isso, a gente não vai passar as props por parâmetros.
+Quando mexemos com Estados a nossa função tem que acessar o this para ela acessar o Estado também e com essa sintaxe acima, fazendo 1 dela por função, a função declarada tem acesso ao this.
+
+Acessando uma função nossa dentro da classe
+Para acessar uma função que criamos dentro de uma classe num eventListener precisamos explicitar a origem de nossa função com a sintaxe this.minhaFuncao.
+
+A grande questão, no entanto, é que é possível adicionar aos construtores das classes React comportamentos e lógica extras! Fazemos assim:
+
+import React from 'react';
+import './App.css';
+
+class App extends React.Component {
+  constructor(props) {
+   
+    // A função `super()` é chamada para garantir que a lógica interna do React rode **antes** da sua. Se não for assim, o código não funcionará
+    super()
+
+    // Sua lógica extra vai aqui! O parâmetro `props` é opcional, para você acessar as props diretamente no construtor
+  }
+
+  render() {
+    return <span>Meu componente!</span>
+  }
+}
+
+export default App;
+
+Pelos motivos que veremos a seguir, conhecer o construtor é peça fundamental para usarmos Eventos e Estados nos componentes do React!
+
+O this acessa, nos componentes React, um objeto que guarda tudo que importa àquele componente . Um código de Hello, World! em React, ilustrado abaixo, gera a impressão no console a seguir:
+
+import React from 'react';
+import './App.css';
+
+class App extends React.Component {
+  render() {
+    console.log(this)
+    return <span>Hello, world!</span>
+  }
+}
+
+export default App;
+
+--
+
+App {
+  context: {}
+  props: {}
+  refs: {}
+  state: null
+  updater: { isMounted: ƒ, enqueueSetState: ƒ, enqueueReplaceState: ƒ, enqueueForceUpdate: ƒ }
+  _reactInternalFiber: FiberNode { tag: 1, key: null, stateNode: App, elementType: ƒ, type: ƒ, …}
+  _reactInternalInstance: {_processChildContext: ƒ}
+  isMounted: (...)
+  replaceState: (...)
+  __proto__: Component
+    constructor: class App
+    isMounted: (...)
+    render: ƒ render()
+    replaceState: (...)
+    __proto__: {...}
+  // ... Continua
+  }
+  
+Como se pode ver, o this, dentro das classes de componentes React, é um objeto enorme que contém, basicamente, tudo que concerne aquele componente dentro da aplicação.
+Quando fazemos this.props , estamos acessando a chave props dentro do objeto this , que irá conter as propriedades ( props vem de propriedades !) passadas àquele componente. Com ele, por exemplo, conseguimos acessar as props e outras coisas, como o estado do componente , dentro das funções render e constructor , para dar dois exemplos.
+  
+Se definirmos uma função da classe com uma arrow function, com a sintaxe "minhaFuncao = () => {...}", não precisaremos fazer o bind no constructor, mas a aplicação será menos performática!
+Se quiser ler mais a respeito, busque o texto "Binding vs arrow-function (for react onClick event)" nos Recursos Adicionais!
+
+
+DEIXANDO OS EVENTOS E VOLTANDO A FALAR DE ESTADOS... AGORA VAMOS JUNTAR ISSO TUDO:
+
+Unindo componentes com estados e eventos:
+
+No Ex. de um código que tenha um botão e que ao clicar nele imprima o log armmazenando a quantidade de cliques que é dado nele. (Ex. prático nos arquivos do dia em "./exercicios-trybe/modulo-02-des-front-end/bloco-11-componentes-com-estado-eventos-e-formularios-com-react/dia-1-componentes-com-estado-e-eventos/exercicios-assincronos/fancy-buttons"
+VAMOS FAZER ALGO ACONTECET COM ELE...
+
+Tem 2 passos que precisamos seguir para fazer as coisas acontecerem...
+A gente quer clicar no botão q com isso que apareça o número de cliques que foi dado. Para isso temos que ter o "ESTADO INICIAL(1º passo)" que se encontra que diz quantos cliques tem quando o componente é carregado. Ex. 0(zero), caso ainda não tenhamos dado nenhum clique, isso tem que está em algum lugar... e depois temos que ter "UMA LÓGICA QUE PARA CADA CLIQUE EU CONSIGA INCREMENTAR EM 1 O ESTADO DA APLICAÇÃO(2º passo)".
+A gente precisa ter acvesso ao this na função que vai atualizar o estado!
+handleClick() {
+    this.state = {
+      
+    }
+  }
+^^^^^^^^^^^^^^^^^^^
+NUNNNNNCA, NUNNNNNCA, NUNNNNNCA FAZEMOS ISSO!
+Nunca podemos setar o Estado fazendo isso... Só pode ser feito no "constructor()"!
+No React o Estado é atualizado de forma assíncrona, pois ele faz isso para ganhar eficiência.
+Então chamamos uma função que funcione de forma assíncrona.
+handleClick() {
+    this.state({
+      numeroDeCliques: 1
+    })
+}
+
+E muita atenção ao que foi dito acima! NUNCA devemos atribuir valores ao estado diretamente com this.state.
+O estado é atualizado de forma assíncrona pelo React, para garantir performance, e o React não garante a ordem em que as atualizações ocorrerão.
+Se fizermos uma atribuição direta, teremos problemas!
+Faça-o sempre através da função this.setState(meuNovoObjetoQueRepresentaOEstado).
+
+Se quisesse chamar, no elemento, um evento passando um parâmetro, deveria trocar a sintaxe "<button onClick{this.minhaFuncao} ...>" por "<button onClick={() => this.minhaFuncao('meu parametro')}".
+Basicamente, substitui a função do evento por uma chamada à mesma feita via callback!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
