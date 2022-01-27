@@ -174,7 +174,12 @@ Isso significa que as funções que manipularão o estado devem ser declaradas s
 Quando algum componente filho deve passar alguma informação ao componente pai, ele deve receber como props a função que atualiza o estado do pai e dar a ela, como parâmetro, a informação pedida.
 A informação transmitida dessa forma será inserida no estado do componente pai.
 
+FALTA FAZER:
 
+Quiz de fixação de aprendizado.
+https://app.betrybe.com/course/front-end/componentes-com-estado-eventos-e-formularios-com-react/componentes-com-estado-e-eventos/c9b36f6a-0ffb-4d94-b3e8-6d607415598a/fixando-os-aprendizados/107?use_case=side_bar
+
+Reassistir vídeo da aula ao vivo com Cestari.
 
 
 
