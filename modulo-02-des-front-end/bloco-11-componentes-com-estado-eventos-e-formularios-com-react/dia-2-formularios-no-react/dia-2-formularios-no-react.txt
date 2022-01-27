@@ -1,0 +1,216 @@
+>>> FORMULÁRIOS NO REACT <<<
+https://pt-br.reactjs.org/docs/forms.html (DOC)
+
+* Como colocamos validação no formulário no React, grantindo que as informações digitadas pela pessoa usuária estão no formato esperado?
+* Com um formulário com 20 campos ou mais, como conseguimos ter uma única função que atualize o estado para todos esses campos diferentes?
+* Como conseguimos passar um Estado de um componente filho para um componente pai?
+
+SABEREMOS AQUI:
+
+Criar formulários utilizando sintaxe JSX com as tags: input, textarea, select, form;
+Transmitir informações de componentes filhos para componentes pais via callbacks.
+
+Os formulários no React se comportam de forma um pouco diferente do HTML padrão. O state é a chave para essa charada!
+
+
+*** Componentes controlados: ***
+
+A primeira diferença importante é com relação ao local onde são armazenada as informações digitadas no formulário.
+No JS puto, essas informações são armazenadas no "DOM".
+No React, essas informações são armazenadas no "Estado"!
+
+Mas como?...
+O primeiro passo é colocar no código "dentro da classe" e "antes do render()" uma função "constructor()" com a "função super()", chamando o "estado inicial" com o "this" e dentro dele declarando os nomes dos campos do form com '', 0, false, etc.
+
+constructor() {
+   super()
+   
+   this.state = {
+   name do campo 1: ,
+   name do campo 2: ,
+   name do campo 3: ,
+   name do campo 4: ,
+   name do campo 5: ,
+   }
+}
+
+
+Agora é só assossiar os estados aos elementos. como? Em 2 etapas, pois cada elemento desse tem um valor... "value".
+Esse valor será o valor que está no estado e temos que ter um Evento "onChange", que vai dizer como esse valor vai parar dentro do Estado.
+
+Fazendo para o primeiro elemento...
+Como pegar o valor inserido por quem está usando com o "onChange={this.handleTextAreaChange}" e jogar esse valor para o handele de Eventos.
+
+constructor() {
+   super()
+   
+   this.state = {
+   name do campo 1: ,
+   name do campo 2: ,
+   name do campo 3: ,
+   name do campo 4: ,
+   name do campo 5: ,
+   }
+}
+
+handleTextAreaChange(event) {
+  // console.log(event.target.value)
+}
+
+onChange={ this.handleTextAreaChange } (Isso vai dentro da label após o name e antes de fechá-la). 
+
+
+Agora vamos fazer o bind entre a "função super()" e o "objeto this.state" e depois atualizar o Estado colocando dentro da "função handleTextAreaChange(event)" o valor que a pessoa insere.
+
+constructor() {
+   super()
+   
+   this.handleTextAreaChange = this.handleTextAreaChange.bind(this)
+   
+   this.state = {
+   name do campo 1: ,
+   name do campo 2: ,
+   name do campo 3: ,
+   name do campo 4: ,
+   name do campo 5: ,
+   }
+}
+
+handleTextAreaChange(event) {
+  this.setState({ estadoFavorito: event.target.value })
+}
+
+Também vamos colocar como valor deste componente o valor do Estado: value={ this.state.estadoFavorito } (Isso vai dentro da label após o name e antes do onChange={ this.handleTextAreaChange } fechando o ciclo.
+
+Isso se repetirá para cada elemento.
+
+OBS.: Quando um elemento que compõe o formulário passa a ser controlado pelo Estado React, damos o nome de COMPONENTE CONTROLADO. Aqui não estamos falando de Componente React, mas sim de Componente de Formulário!
+
+E como sabemos se está funcionando se tiramos o console.log? Usando a extensão do chrome: React Developer Tools. Ao instalar, teremos acesso na tela de inspecionar à aba Componentes.
+
+
+*** Agora faremos isso para todos os componentes, MAS SEM REPETIR CÓDIGO! ***
+
+** event handlers genéricos **
+
+Nós fizemos acima um dos nossos componentes do formulário ser um componente controlado.
+
+Agora o objetivo é que todos os componentes do formulário sejam componentes controlados, mas fazendo isso com um único handler. Como fazemos isso?
+Fazendo uma sintaxe de "interpolação da chave do state".
+
+> Primeiro vamos desconstruir o parâmetro "event" da função "handleTextAreaChange":
+Ficando assim: handleTextAreaChange({ target });
+> Depois no this.setState tiramos a palavra evento devido à desconstrução:
+Ficando assim: this.setState({ estadoFavorito: target.value });
+> O próximo passo é criar uma vriável com name e value, também usando desconstrução:
+Ficando assim: const { name, value } = target;
+> Agora excluímos o "this.setState({ estadoFavorito: target.value })" e colocamos "this.setState" passando objeto, mas ao invés de passar o "estadoFavorito" como value, vamos passar "[name]: value". E issso é como se estivéssemos interpolando o valor da variável pra ser o nome da chave do objeto.
+Assim, quando "o nome do componente for === estadoFavorito", é como se "[name] fosse === estadoFavorito". Se "o nome do componente mudar para email", "[name] passará a ser === email", e assim sucessivamente.
+> Depois disso, pegaremos todos os componentes do form e faremos serem usados pelo mesmo "handle". Para isso mudaremos o nome da "função handleTextAreaChange" para "handleChange".
+OBS.: Não podemos esquecer de trocar o nome para "handleChange" também acima no "bind"!
+
+Agora vamos os outros componentes do form agirem da mesma forma.
+
+OBS.: UM DETALHE PARA NÃO TER DOR DE CABEÇA COM ISSO!!!!!!!
+Em check Box (caixinha de seleção) "[x]", o funcionamento é diferente.
+Quando pegamos o "checkbox" ele não funciona. Pode maarcar e desmarcar na página que seu valor do seu Estado não mudará.
+É uma particularidade do JS, que o o valor da checkbox, o booleano (true or false), NÃO FICA NO VALUE!
+Especificamente para checkbox, esse valor fica dentro de um campo em uma chave chamada CHECKED!!!
+
+> Então, mudamos a desestruturação da variável que criamos acima e tiramos o parâmetro value:
+Ficando assim: const { name } = target;
+> depois criamos outra variável chamada value e assossiamos ela à um TERNÁRIO:
+Ficando assim: const value = target.type === 'checkbox' ? target.checked : target.value;
+
+*** O formulário ainda NÃO está completão! Agora precisamos fazer uma validação nele para o caso de dar ERRO! ***
+
+** Transmitindo informações de componente filho para componente pai **
+
+Levando em conta o tamanho que ficou nosso código do formulário, com select, todos os inputs e tudo mais dentro de um render() gigante!
+Quando temos um render tão grande, acende um alerta de que podemos dividir nosso componente em componentes menores.
+
+Então...
+
+> Primeiro vamos criar um componente chamado "EstadoFavorito.js" e colocar os devidos imports e class nele;
+> Depois pegaremos a label referente ao EstadoFavorito e seu contteúdo e colocaremos dentro do return do componente EstadoFavorito.ja que foi criado;
+> Após isso, renderizaremos no form.js(onde estava a label criada a tag <EstadoFavorito />.
+
+OB>.: Note que o Estado ficará no Formulário porque temos muitos campo e NUNCA podemos ter o Estado de um componente repetido nos seus subcomponentes!!!
+O valor do componente filho ficará no componente pai. Mas como passamos esse valor do Estado do pai para o filho?
+
+Basta definir uma PROP na tag que renderiza o filho passando um valor.
+Ficando assim: <EstadoFavorito value={ this.state.estadoFavorito } /> e o valor que tiver no Estado referente ao EstadoFavorito, vai ser recebido no filho através de uma prop, que será desconstruída dentro do render com uma const  { value } = this.props e passando no value o valor {value}.
+
+Mas como que eu insiro um dado em um componente filho e salvo no pai? Pois ainda assim eles estão em componentes diferentes!
+ISSO FAZEMOS COM CALLBACK!
+
+É basicamente o seguinte:
+
+> O pai é o dono do Estado! ( é o que está dentro do constructor() );
+> O pai terá a função que manipula o próprio Estado dele! ( é o que está em handleChange({ target }) );
+> No pai, passaremos essa função como prop! ( dentro da tag que renderiza, depois do value. handleChange={ this.handleChange } )!
+ficando a tag: <EstadoFavorito value={this.state.estadoFavorito} handleChange={ this.handleChange } />
+> E no filho, pegamos essa prop(handleChange) e passamos na variável desconstruída dentro do render ao lado de value!
+Ficando: const { value, handleChange } = this.props;
+> E depois, ainda no filho, passamos ela mudando o valor de "onChange" pra handleChange. Basta tirar o "this."!
+Ficando: onChange={handleChange};
+
+E desta forma, dentro do componente filho a gente pode gerar mensagens de Erro...
+Exemplo: colocando dentro do filho dentro do render antes do retorno:
+
+RESUMO DO QUE VIMOS SÓ COM ESSA AULA DE FORMULÁRIOS:
+
+>> Vimos como termos render's genéricos, que lidam com a lógica de muitos componentes em um lugar só;
+>> Vimos como fazemos formulários, que é uma coisa muito importante, em React! Com os elementos desse formulário sendo completamente controlados pelo Estado do componente pai;
+>> Como que a gente passa informações de um componente filho para o Estado de um componente pai;
+>> De quebra, ainda vimos como podemos fazer uma lógica super trnquila de validação de erros por componente.
+
+
+A transmissão de informações de um componente filho para um componente pai é um dos conceitos primordiais de React.
+
+Ele se baseia nos seguintes pilares:
+O componente pai detém o Estado e controla completamente como ele será atualizado.
+Isso significa que as funções que manipularão o estado devem ser declaradas sempre nele mesmo.
+Quando algum componente filho deve passar alguma informação ao componente pai, ele deve receber como props a função que atualiza o estado do pai e dar a ela, como parâmetro, a informação pedida.
+A informação transmitida dessa forma será inserida no estado do componente pai.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
