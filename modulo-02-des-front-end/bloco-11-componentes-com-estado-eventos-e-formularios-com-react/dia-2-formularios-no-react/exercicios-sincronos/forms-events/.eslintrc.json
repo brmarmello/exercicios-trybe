@@ -1,0 +1,10 @@
+{
+    "root": true,
+    "parser": "babel-eslint",
+    "extends": ["trybe-frontend"],
+    "rules": {
+      // "react/prop-types": "on",
+      "no-alert": "off"
+      // "react/state-in-constructor": "off"
+    }
+  }
