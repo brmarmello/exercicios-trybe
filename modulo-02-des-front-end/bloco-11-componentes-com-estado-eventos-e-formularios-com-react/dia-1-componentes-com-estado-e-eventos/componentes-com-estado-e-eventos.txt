@@ -186,53 +186,44 @@ Se quisesse chamar, no elemento, um evento passando um parâmetro, deveria troca
 Basicamente, substitui a função do evento por uma chamada à mesma feita via callback!
 
 
+*** State vs Props: ***
+
+Você pode entender a diferença "props" vs "state" da seguinte forma:
+
+>> props são uma forma de passar dados de pai para filho;
+>> state é reservado para dados que seu componente controla;
+>> O conceito é:
+"state" ou estado do componente, deve servir para guardar valores do Componente que mudam com o uso do mesmo.
+"props" são valores fixos que um componente recebe e não altera.
+>> Pelos princípios do React você nunca deve tentar alterar o que um componente recebe como props como no exemplo abaixo:
+this.props.name = 'novo nome';
+
+
+EM RESUMO:
+Vamos recapitular?
+
+Hoje, no conteúdo, começamos a desenvolver as seguintes habilidades:
+
+>> Ler o estado de um componente e usá-lo para alterar o que exibimos no browser;
+>> Inicializar um componente, dando a ele um estado pré-definido;
+>> Atualizar o estado de um componente;
+>> Capturar eventos utilizando a sintaxe do React.
+
+Para isso estudamos, no conteúdo, os seguintes pontos:
+
+>> Todo componente possui seu próprio estado e tem 100% de controle sobre ele;
+>> Quando um componente é colocado na tela ele executa uma função chamada constructor, e usando a linha "super()" podemos sobrescrevê-la para estender seu comportamento;
+>> O objeto this , acessível a toda classe de componente React, contém tudo o que concerne àquele componente e deve ser vinculado explicitamente às funções criadas dentro da classe, através da sintaxe "this.minhaFuncao = this.minhaFuncao.bind(this)" no construtor do componente;
+>> Funções que tratam eventos devem ser vinculadas aos seus respectivos elementos com "{this.minhaFuncao}" ou "{() => this.minhaFuncao('Meu parametro')";
+>> É possível ler o estado de um componente via this.state, é possível definir um estado inicial no construtor com uma atribuição a "this.state" e deve-se atualizar tal estado somente com a função "this.setState";
+>> A atualização do estado é assíncrona e, por isso, se você quiser garantir que uma atualização ocorrerá depois da outra, tal atualização deverá ser definida via callback passada à função "this.setState", no formato "this.setState((estadoAnterior, props) => novoEstado)".
 
 
 
+FALTA FAZER:
 
+Quiz de fixação de aprendizado.
+https://app.betrybe.com/course/front-end/componentes-com-estado-eventos-e-formularios-com-react/componentes-com-estado-e-eventos/c9b36f6a-0ffb-4d94-b3e8-6d607415598a/fixando-os-aprendizados/107?use_case=side_bar
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Reassistir vídeo da aula ao vivo com Cestari.
 
