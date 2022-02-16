@@ -1,0 +1,51 @@
+Grandes e principais fundamentos de React:
+
+React e seus Componentes;
+Props e Calbacks para transmitir informação de Componentes pais para filhos e vice versa;
+Estado; **(VERRR - state leifert)**
+Eventos;
+Ciclo de vida;
+React Router.
+
+---------------------------------------------------------------------------------------------------------
+
+Sequência:
+Testes...
+
+teste estatico - eslint
+teste unitario - jest
+*** teste de integração - rtl ***
+teste de sistema - E2E(ende to end) - Cypress
+
+
+
+Aqui seremos capazes de:
+
+>> Utilizar os seletores (queries) da React-Testing-Library em testes automatizados;
+>> Simular eventos com a React-Testing-Library em testes automatizados;
+>> Testar fluxos lógicos assíncronos com a React-Testing-Library;
+>> Escrever testes que permitam a refatoração da estrutura dos componentes da aplicação sem necessidade de serem alterados.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
