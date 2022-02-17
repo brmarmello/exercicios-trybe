@@ -1,0 +1,21 @@
+Pra que serve os mocks?
+
+Simular as Funções
+Controlar o Resultado
+Quebrar Dependências / Tirar a Dependência da API
+Verificar as Interações com as Nossas Funções que Estão sendo Mockadas
+
+
+FILOSOFIA DA RTL:
+
+Os testes devem ser feitos levando em conta a acessibilidade da aplicação.
+
+
+Aqui serei capaz de:
+
+Utilizar mock functions para simular funções e seus retornos;
+Criar mocks de APIs utilizando fetch;
+Testar inputs.
+
+
+
