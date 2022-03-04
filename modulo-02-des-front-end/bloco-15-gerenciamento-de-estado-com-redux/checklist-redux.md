@@ -1,4 +1,4 @@
-# Checklist do Redux
+# Checklist do React-Redux
 
 *Antes de começar*
 - [ ] pensar como será o *formato* do seu estado global
@@ -44,6 +44,7 @@ const rootReducer = combineReducers({ exampleReducer })
 ```
 
 *No arquivo store/index.js:*
+
 - [ ] importar `rootReducer` e usá-lo na criação da `store`
 - [ ] configurar o [Redux DevTools](https://github.com/reduxjs/redux-devtools)
 - [ ] exportar a `store`
