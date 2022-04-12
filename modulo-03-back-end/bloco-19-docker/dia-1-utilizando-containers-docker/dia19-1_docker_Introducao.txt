@@ -1,6 +1,6 @@
 Módulo de BackEnd
 
-Dia 19.1| Docker - Introdução
+Dia 19.1| Docker - Introdução - Utilizando Containers
 
 
 Aqui o aprendizado capacitará à:
@@ -18,6 +18,11 @@ Entender quais são os principais comandos para utilização do Docker na interf
 Rodar imagens do Docker Hub (repositório oficial de imagens do Docker).
 
 ---------------------------------------------
+
+
+
+https://github.com/tryber/sd-xp-a-live-lecture/pull/41
+
 
 
 https://app.betrybe.com/course/back-end/docker/utilizando-containers-docker/208d7122-25f3-4135-b6bc-84ebb49665a8/conteudos/59222f39-d824-414c-858c-d54c02456763/principais-comandos-do-cli/8c54d943-97be-4495-9671-d4aabde90a53?use_case=next_button
