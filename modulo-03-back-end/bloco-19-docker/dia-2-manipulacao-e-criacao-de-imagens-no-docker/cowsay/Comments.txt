@@ -1,0 +1,25 @@
+ITEM 4:
+Builde e execute um container baseado em sua imagem sem passar nenhum comando.
+>> docker image build ./ -t cowsay
+
+ITEM 5:
+Agora execute um novo container passando sua mensagem para testar, além da mensagem você pode utilizar a opção -l para listar outros personagens disponíveis e então executar algo como docker container run cowsay -f dragon-and-cow "#VQV TRYBE" , para exibir um dragão junto com a vaquinha.
+>> docker container run cowsay -f moofasa "#VQV TRYBE"
+
+RODAR:
+>> docker container run cowsay Muuuuuuhhh
+>> docker container run cowsay -f dragon-and-cow "Hoje vou comer churrasco, hahahaha!"
+
+
+Recursos Adicionais (opcional):
+
+Docker - Limpando contêineres, imagens e volumes
+(http://www.macoratti.net/19/02/dock_limp1.htm)
+Documentação oficial do Docker - About storage drivers
+(https://docs.docker.com/storage/storagedriver/)
+Docker Layers Explained
+(https://dzone.com/articles/docker-layers-explained)
+Documentação oficial do Docker - Docker Images
+(https://docs.docker.com/engine/reference/commandline/images/)
+Documentação oficial do Docker - Dockerfile
+(https://docs.docker.com/engine/reference/builder/)
