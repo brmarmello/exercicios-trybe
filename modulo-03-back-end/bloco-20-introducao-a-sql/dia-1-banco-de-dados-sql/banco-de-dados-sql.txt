@@ -1,0 +1,56 @@
+MySQL na linha de comando
+
+Comandos mais comuns
+Por convenção, utilizamos as palavras chave do SQL em caixa alta para diferenciar das indicações de tabelas e colunas. Ah, é fundamental utilizar o ; (ponto e vírgula) ao final de cada comando SQL, caso contrário ele não irá funcionar.
+
+1. O comando USE serve pra definir a referência do banco de dados que será utilizado na query :
+USE nome_do_banco_de_dados_que_quero_conectar;
+-- EX: USE trybe;
+
+1.1 Uma outra forma de fazer referência ao banco, sem ter que rodar o USE é no formato banco_de_dados.tabela :
+SELECT * FROM banco_de_dados.tabela;
+-- EX: SELECT * FROM trybe.students;
+
+2. Para retornar todas as tabelas inicializadas no seu server:
+SHOW TABLES;
+
+3. Visualizar estrutura de uma tabela:
+DESCRIBE nome_da_tabela;
+-- EX: DESCRIBE students;
+
+4. Criar um banco de dados:
+CREATE DATABASE nome_do_banco_de_dados;
+-- EX: CREATE DATABASE trybe;
+
+
+Como os dados são ligados?
+
+Existem quatro tipos de relacionamento em um banco de dados.
+
+>>>> Um para Um <<<<
+
+Uma linha da Tabela A só deve possuir uma linha correspondente na tabela B ou vice-versa.
+Ex.: um empregado só pode estar relacionado a um pagamento, e um pagamento deve estar relacionado a apenas um empregado.
+
+Apesar de ser possível inserir essas informações em apenas uma tabela, esse tipo de relacionamento é usado normalmente quando se quer dividir as informações de uma tabela maior em tabelas menores por questões de performance, a fim de evitar tabelas com dezenas de colunas, ou por várias outras questões específicas de um negócio. Pode ser encontrado em alguns conteúdos com a abreviação: 1:1 (um para um) .
+
+
+>>>> Um para Muitos ou Muitos para Um <<<<
+
+Esse é um dos tipos mais comuns de relacionamento. Em cenários assim, uma linha na tabela A pode ter várias linhas correspondentes na tabela B , mas uma linha da tabela B só pode possuir uma linha correspondente na tabela A .
+Ex.: uma categoria pode estar ligada a vários livros; porém um livro deve possuir apenas uma categoria.
+
+Pode ser encontrado em alguns conteúdos com a abreviação: N:1 (muitos para um) ou 1:N (um para muitos) dependendo da regra de negócio.
+
+
+>>>> Muitos para Muitos <<<<
+
+O tipo de relacionamento muitos para muitos acontece quando uma linha na tabela A pode possuir muitas linhas correspondentes na tabela B e vice-versa.
+
+O relacionamento muitos para muitos pode ser visto também como dois relacionamentos um para muitos ligados por uma tabela intermediária, como é o caso da tabela filme_ator do banco sakila . Podemos chamar essa tabela intermediária de tabela de junção. Ela é usada para guardar informações de como as tabelas se relacionam entre si.
+
+Dessa maneira, quando queremos demostrar que um filme pode contar com vários atores, e também que os atores podem atuar em vários filmes, surge a necessidade de um relacionamento muitos para muitos.
+
+Pode ser encontrado em alguns conteúdos com a abreviação: N:N (muitos para muitos) .
+
+
