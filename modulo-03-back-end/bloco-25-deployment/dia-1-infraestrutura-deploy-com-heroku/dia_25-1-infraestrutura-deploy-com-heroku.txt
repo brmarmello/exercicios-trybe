@@ -1,0 +1,60 @@
+Build de api node utilizando express - no heroku:
+
+
+FRONT-END:
+
+niciar um projeto React = npx create-react-app "NOME DO APP(meu-primeiro-deploy-heroku)";
+entre na pasta do projeto e dá um "ls" pra visualizar o cenário;
+lista os remotos que temos disponíveis(add) no git = git remote -v;
+	OBS.: Como acabamos de iniciar o projeto git, não temos nenhum remote vinculado à nossa aplicação
+adicionar api do heroku usando uma buildpack, ela vai add os remotes pra subir a api pro heroku = heroku create -b "NOME DO BUILDPACK(EX.: mars/create-react-app)";
+
+OBS1.: o heroku usa o "nginx" como servidor para os arquivos gerados pelo create-react-app. o "nginx" é um servidor muito robusto e seguro e no caso do front é usado como o back usa o express. Fazem o mesmo papel.
+OBS2.: toda vez que fomos utilizar ou criar uma aplicação do heroku dentro de uma aplicação nossa, temos sempre que nos certificar que primeiramente o git foi iniciado no projeto. No caso do front não precisa, pq o create-react-app já cria um repositório git na sua instalação.
+OBS3.: se der um git remote -v não vai aparecer nada ainda pq é apenas a instalação do git puro sem nenhuma origin e nenhum lugar add, mas se der um git status já aparece o tree clean informando que não tem nada pra ser add nem commitado.
+
+adicionar a aplicação do heroku dentro da pasta de arquivos, add os remotes para subir a api = heroku create -b "NOME DO BUILDPACK(EX.: mars/create-react-app)". o "-b" é o mesmo que --buildpack;
+dar git remote -v = agora aparece as 2 origins do heroku (fetch e push);
+dar git status + git add . + git commit -m '...';
+para fazer o build = git push heroku master;
+
+no GitHub, criar um repositório EX.: meu-primeiro-deploy-heroku;
+no terminal, executar o comando para vincular a aplicação ao repositório criado no GitHub;
+	Utilizar chave ssh = git remote add origin git@github.com:[USUARIO_GITHUB]/meu-primeiro-deploy-heroku.git
+	Utilizar HTTPS = git remote add origin https://github.com/[USUARIO_GITHUB]/meu-primeiro-deploy-heroku.git
+executar novamente o comando git remote -v e ver que, dessa vez, aparecerá algo parecido com:
+	origin git@github.com:[SEU_USUARIO_GITHUB]/meu-primeiro-deploy-heroku.git (fetch)
+	origin git@github.com:[SEU_USUARIO_GITHUB]/meu-primeiro-deploy-heroku.git (push)
+
+OBS4.: Outras infos como nomear, renomear, etc. em:
+	https://app.betrybe.com/course/back-end/deployment/infraestrutura-deploy-com-heroku/30597149-145b-49a1-924c-bd8050a8f249/conteudo/b7d4a5c3-c013-4e3a-9573-d0434cd88359/preparando-um-projeto-para-deploy/84896476-2f76-4b22-8ff7-8cc842e6d9b8?use_case=side_bar
+sobe app para o heroku = git push heroku master;
+OBS5.: Usar outras branchs, lidando com vários deploys, etc. em:
+	https://app.betrybe.com/course/back-end/deployment/infraestrutura-deploy-com-heroku/30597149-145b-49a1-924c-bd8050a8f249/conteudo/b7d4a5c3-c013-4e3a-9573-d0434cd88359/fazendo-deploy/24fe3beb-96c2-453a-a0b2-ca47d83bca48?use_case=next_button
+
+Acompanhando a aplicação - Gerenciando os apps:
+	https://app.betrybe.com/course/back-end/deployment/infraestrutura-deploy-com-heroku/30597149-145b-49a1-924c-bd8050a8f249/conteudo/b7d4a5c3-c013-4e3a-9573-d0434cd88359/acompanhando-sua-aplicacao/7f9f459e-7359-4d1a-a1ce-619efbcfea88?use_case=next_button
+
+
+
+BACK-END:
+
+abre o vcc na pasta do projeto;
+inica uma api node = npm init -y;
+instala o express pra rodar o servidor = npm install --save express;
+cria um entripoint pra api = criar um arquivo index.js;
+vamos estruturar o server express como se fosse rodar normalmente na máquina | criar rota  = faz o código do index.js;
+edita o pack.json incluindo o start no scripts = "start": node index.js,;
+configurar a porta que vai rodar de forma estática no index.js;
+inicia o git no repo do projeto = git init;
+cria app no heroku = heroku create;
+cria um .gitignore para colocar node_modules;
+lista os remotos que temos disponíveis(add) no git = git remote -v;
+git add . + commit...;
+sobe app para o heroku = git push heroku master;
+para listar os logs = heroku logs --app 'nome do projeto que tem no link' -t;
+
+
+
+Recursos Adicionais:
+https://app.betrybe.com/course/back-end/deployment/infraestrutura-deploy-com-heroku/30597149-145b-49a1-924c-bd8050a8f249/recursos-adicionais/f63ae3b4-2bd4-4439-9568-51bc9e0fac46?use_case=side_bar
